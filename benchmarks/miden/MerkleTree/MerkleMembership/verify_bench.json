@@ -2,61 +2,19 @@
   "name": "miden",
   "results": [
     {
-      "name": "Merkle Tree Merge",
+      "name": "Merkle Membership",
       "results": [
         {
           "metrics": {
-            "Security Level": 0,
-            "compressed_proof_size_bytes": 49025,
-            "cycles": 18,
+            "Security Level": 96,
+            "compressed_proof_size_bytes": 48713,
+            "cycles": 215,
             "memory_usage_bytes": 0,
-            "proof_size_bytes": 49016
+            "proof_size_bytes": 48704
           },
-          "name": "1 + 1",
+          "name": "Merkle Membership",
           "time": {
-            "nanos": 57,
-            "secs": 0
-          }
-        },
-        {
-          "metrics": {
-            "Security Level": 0,
-            "compressed_proof_size_bytes": 48090,
-            "cycles": 18,
-            "memory_usage_bytes": 0,
-            "proof_size_bytes": 48081
-          },
-          "name": "2^10 + 2^10",
-          "time": {
-            "nanos": 62,
-            "secs": 0
-          }
-        },
-        {
-          "metrics": {
-            "Security Level": 0,
-            "compressed_proof_size_bytes": 49314,
-            "cycles": 18,
-            "memory_usage_bytes": 0,
-            "proof_size_bytes": 49305
-          },
-          "name": "2^10 + 2^20",
-          "time": {
-            "nanos": 46,
-            "secs": 0
-          }
-        },
-        {
-          "metrics": {
-            "Security Level": 0,
-            "compressed_proof_size_bytes": 48738,
-            "cycles": 18,
-            "memory_usage_bytes": 0,
-            "proof_size_bytes": 48729
-          },
-          "name": "2^20 + 2^20",
-          "time": {
-            "nanos": 49,
+            "nanos": 47,
             "secs": 0
           }
         }
