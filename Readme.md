@@ -1,4 +1,4 @@
-# Uzumaki
+# Uzumaki Benchmarking Suite
 
 1. **Variety of Systems**: Numerous ZK proof systems exist, each with unique features and optimizations, necessitating a method for comparison.
 2. **Targeted Applications**: Different systems are tailored for specific use cases, making benchmarking essential to identify the best fit for a particular application.
