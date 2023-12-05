@@ -1,0 +1,62 @@
+{
+  "name": "miden",
+  "results": [
+    {
+      "name": "Merkle Tree Merge",
+      "results": [
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 46913,
+            "cycles": 18,
+            "memory_usage_bytes": 11056742,
+            "proof_size_bytes": 46904
+          },
+          "name": "1 + 1",
+          "time": {
+            "nanos": 95690374,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 49409,
+            "cycles": 18,
+            "memory_usage_bytes": 10636902,
+            "proof_size_bytes": 49400
+          },
+          "name": "2^10 + 2^10",
+          "time": {
+            "nanos": 81278819,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 49338,
+            "cycles": 18,
+            "memory_usage_bytes": 1044480,
+            "proof_size_bytes": 49329
+          },
+          "name": "2^10 + 2^20",
+          "time": {
+            "nanos": 137473013,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 48570,
+            "cycles": 18,
+            "memory_usage_bytes": 1044480,
+            "proof_size_bytes": 48561
+          },
+          "name": "2^20 + 2^20",
+          "time": {
+            "nanos": 211495254,
+            "secs": 0
+          }
+        }
+      ]
+    }
+  ]
+}
