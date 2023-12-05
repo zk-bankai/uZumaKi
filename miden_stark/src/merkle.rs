@@ -18,7 +18,7 @@ pub fn membership(
     let advice = MemAdviceProvider::from(advice);
 
     let program = Assembler::default()
-        .compile(include_str!("./Membership/membership.masm"))
+        .compile(include_str!("./asm/Membership/membership.masm"))
         .unwrap();
 
     let stack = StackInputs::default();
