@@ -554,6 +554,7 @@ dependencies = [
  "miden-processor",
  "miden-prover",
  "miden-stdlib",
+ "miden-verifier",
  "miden-vm",
  "shared",
  "zstd",

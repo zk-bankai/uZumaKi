@@ -1,7 +1,8 @@
 extern crate miden_stark;
 
 use benchy::{benchmark, BenchmarkRun};
-use miden_stark::{fib::fib, merkle};
+use miden_processor::{StackInputs, ProgramInfo, Kernel};
+use miden_stark::{fib::{fib, fib_verify}, merkle};
 use shared::{
     hash::{rpo::Rpo, HashFn},
     tree_size_n, Tree,
@@ -17,12 +18,37 @@ use shared::{
     ("100000", 100000),
 ])]
 fn fibonacci(b: &mut BenchmarkRun, p: u32) {
-    let (setup, vm) = fib(p);
-    let last_vm_state = vm.last().unwrap().unwrap();
-    let proof = b.run(setup);
-    let proof = proof.to_bytes();
-    b.log("proof_size_bytes", proof.len());
+    // Output : 
+    // - output_stack
+    // - proof
+    // - vm_state
+    // - program_hash
+    let (proof_outputs, vm_outputs) = fib(p);
+
+    let (output_stack, proof) = proof_outputs();
+    let (vm_state, program_hash) = vm_outputs;
+    let execution_proof = proof;
+
+    let last_vm_state = vm_state.last().unwrap().unwrap();
+    let proof = b.run(proof_outputs);
+    let proof_parsed = proof.1.to_bytes();
+    b.log("proof_size_bytes", proof_parsed.len());
     b.log("cycles", last_vm_state.clk as usize);
+
+    let program_info =  ProgramInfo::new(program_hash, Kernel::default());
+
+    // * ============================================
+    // * Verification :
+    // * ============================================
+
+    // ? Need to uncomment when doing the verification metrics
+    
+    let exec = fib_verify(program_info, StackInputs::default(), output_stack, execution_proof);
+
+    let sec_level = b.run(exec);
+
+    b.log("Security Level", sec_level.try_into().unwrap());
+
 }
 
 #[benchmark("Merkle Tree Merge", [
@@ -65,7 +91,7 @@ fn merkle_membership(b: &mut BenchmarkRun) {
 
 benchy::main!(
     "miden",
-    // fibonacci,
+    fibonacci,
     // merkle_tree_merge
-    merkle_membership
+    // merkle_membership
 );
