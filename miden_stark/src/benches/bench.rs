@@ -1,7 +1,7 @@
-extern crate uzumaki;
+extern crate miden_stark;
 
 use benchy::{benchmark, BenchmarkRun};
-use uzumaki::fib::fib;
+use miden_stark::fib::fib;
 
 #[benchmark("Fibonacci", [
     ("1", 1),

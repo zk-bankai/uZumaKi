@@ -1,0 +1,82 @@
+{
+  "name": "miden",
+  "results": [
+    {
+      "name": "Fibonacci",
+      "results": [
+        {
+          "metrics": {
+            "cycles": 8,
+            "memory_usage_bytes": 8478720,
+            "proof_size_bytes": 48657
+          },
+          "name": "1",
+          "time": {
+            "nanos": 75801790,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "cycles": 35,
+            "memory_usage_bytes": 8461107,
+            "proof_size_bytes": 49136
+          },
+          "name": "10",
+          "time": {
+            "nanos": 74020662,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "cycles": 309,
+            "memory_usage_bytes": 8695398,
+            "proof_size_bytes": 48825
+          },
+          "name": "100",
+          "time": {
+            "nanos": 72332728,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "cycles": 3048,
+            "memory_usage_bytes": 41025945,
+            "proof_size_bytes": 58538
+          },
+          "name": "1000",
+          "time": {
+            "nanos": 325657548,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "cycles": 30423,
+            "memory_usage_bytes": 340281344,
+            "proof_size_bytes": 74801
+          },
+          "name": "10000",
+          "time": {
+            "nanos": 46876694,
+            "secs": 3
+          }
+        },
+        {
+          "metrics": {
+            "cycles": 304173,
+            "memory_usage_bytes": 5535125504,
+            "proof_size_bytes": 97101
+          },
+          "name": "100000",
+          "time": {
+            "nanos": 603645856,
+            "secs": 57
+          }
+        }
+      ]
+    }
+  ]
+}
