@@ -2,7 +2,7 @@ extern crate miden_stark;
 
 use benchy::{benchmark, BenchmarkRun};
 use miden_processor::{StackInputs, ProgramInfo, Kernel};
-use miden_stark::{fib::{fib, fib_verify}, merkle};
+use miden_stark::{fib::{fib, fib_verify}, merkle::{self, merkle_verify}};
 use shared::{
     hash::{rpo::Rpo, HashFn},
     tree_size_n, Tree,
@@ -58,17 +58,35 @@ fn fibonacci(b: &mut BenchmarkRun, p: u32) {
     ("2^20 + 2^20", (tree_size_n(20), tree_size_n(20))),
 ])]
 fn merkle_tree_merge(b: &mut BenchmarkRun, (tree1, tree2): (Tree<Rpo>, Tree<Rpo>)) {
-    let (prove, iter) = merkle::merge_trees(&tree1, &tree2);
+    let (proof_outputs, vm_outputs) = merkle::merge_trees(&tree1, &tree2);
 
-    let proof = b.run(prove);
-    let proof_bytes = proof.to_bytes();
+    let (output_stack, proof) = proof_outputs();
+    let (vm_state, program_hash) = vm_outputs;
+    let execution_proof = proof;
+
+    let proof = b.run(proof_outputs);
+    let proof_bytes = proof.1.to_bytes();
     let proof_bytes_zstd = zstd::encode_all(&*proof_bytes, 21).unwrap();
 
     b.log("proof_size_bytes", proof_bytes.len());
     b.log("compressed_proof_size_bytes", proof_bytes_zstd.len());
-    let last_vm_state = iter.last().unwrap().unwrap();
+    let last_vm_state = vm_state.last().unwrap().unwrap();
 
     b.log("cycles", last_vm_state.clk as usize);
+
+    // * ============================================
+    // * Verification :
+    // * ============================================
+
+    // ? Need to uncomment when doing the verification metrics
+    let program_info =  ProgramInfo::new(program_hash, Kernel::default());
+    
+    let exec = merkle_verify(program_info, StackInputs::default(), output_stack, execution_proof);
+
+    let sec_level = b.run(exec);
+
+    b.log("Security Level", sec_level.try_into().unwrap());
+
 }
 
 #[benchmark("Merkle Membership")]
@@ -76,22 +94,39 @@ fn merkle_membership(b: &mut BenchmarkRun) {
     let vec = core::iter::from_fn(|| Some(Rpo::random()))
         .take(10)
         .collect();
-    let (prove, iter) = merkle::membership(vec, Rpo::random());
+    let (proof_outputs, vm_outputs) = merkle::membership(vec, Rpo::random());
 
-    let proof = b.run(prove);
-    let proof_bytes = proof.to_bytes();
+    let (output_stack, proof) = proof_outputs();
+    let (vm_state, program_hash) = vm_outputs;
+    let execution_proof = proof;
+
+    let proof = b.run(proof_outputs);
+    let proof_bytes = proof.1.to_bytes();
     let proof_bytes_zstd = zstd::encode_all(&*proof_bytes, 21).unwrap();
 
     b.log("proof_size_bytes", proof_bytes.len());
     b.log("compressed_proof_size_bytes", proof_bytes_zstd.len());
-    let last_vm_state = iter.last().unwrap().unwrap();
+    let last_vm_state = vm_state.last().unwrap().unwrap();
 
     b.log("cycles", last_vm_state.clk as usize);
+
+    // * ============================================
+    // * Verification :
+    // * ============================================
+
+    // ? Need to uncomment when doing the verification metrics
+    let program_info =  ProgramInfo::new(program_hash, Kernel::default());
+    
+    let exec = merkle_verify(program_info, StackInputs::default(), output_stack, execution_proof);
+
+    let sec_level = b.run(exec);
+
+    b.log("Security Level", sec_level.try_into().unwrap());
 }
 
 benchy::main!(
     "miden",
-    fibonacci,
-    // merkle_tree_merge
+    // fibonacci,
+    merkle_tree_merge
     // merkle_membership
 );
