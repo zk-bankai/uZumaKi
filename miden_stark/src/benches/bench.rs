@@ -18,7 +18,8 @@ use shared::{
     ("100000", 100000),
 ])]
 fn fibonacci(b: &mut BenchmarkRun, p: u32) {
-    // Output : 
+    // Outputs :
+    // ============== 
     // - output_stack
     // - proof
     // - vm_state
@@ -43,11 +44,11 @@ fn fibonacci(b: &mut BenchmarkRun, p: u32) {
 
     // ? Need to uncomment when doing the verification metrics
     
-    let exec = fib_verify(program_info, StackInputs::default(), output_stack, execution_proof);
+    // let exec = fib_verify(program_info, StackInputs::default(), output_stack, execution_proof);
 
-    let sec_level = b.run(exec);
+    // let sec_level = b.run(exec);
 
-    b.log("Security Level", sec_level.try_into().unwrap());
+    // b.log("Security Level", sec_level.try_into().unwrap());
 
 }
 
@@ -58,6 +59,12 @@ fn fibonacci(b: &mut BenchmarkRun, p: u32) {
     ("2^20 + 2^20", (tree_size_n(20), tree_size_n(20))),
 ])]
 fn merkle_tree_merge(b: &mut BenchmarkRun, (tree1, tree2): (Tree<Rpo>, Tree<Rpo>)) {
+    // Outputs :
+    // ============== 
+    // - output_stack
+    // - proof
+    // - vm_state
+    // - program_hash
     let (proof_outputs, vm_outputs) = merkle::merge_trees(&tree1, &tree2);
 
     let (output_stack, proof) = proof_outputs();
@@ -79,13 +86,13 @@ fn merkle_tree_merge(b: &mut BenchmarkRun, (tree1, tree2): (Tree<Rpo>, Tree<Rpo>
     // * ============================================
 
     // ? Need to uncomment when doing the verification metrics
-    let program_info =  ProgramInfo::new(program_hash, Kernel::default());
+    // let program_info =  ProgramInfo::new(program_hash, Kernel::default());
     
-    let exec = merkle_verify(program_info, StackInputs::default(), output_stack, execution_proof);
+    // let exec = merkle_verify(program_info, StackInputs::default(), output_stack, execution_proof);
 
-    let sec_level = b.run(exec);
+    // let sec_level = b.run(exec);
 
-    b.log("Security Level", sec_level.try_into().unwrap());
+    // b.log("Security Level", sec_level.try_into().unwrap());
 
 }
 
@@ -94,6 +101,12 @@ fn merkle_membership(b: &mut BenchmarkRun) {
     let vec = core::iter::from_fn(|| Some(Rpo::random()))
         .take(10)
         .collect();
+    // Outputs :
+    // ============== 
+    // - output_stack
+    // - proof
+    // - vm_state
+    // - program_hash
     let (proof_outputs, vm_outputs) = merkle::membership(vec, Rpo::random());
 
     let (output_stack, proof) = proof_outputs();
@@ -115,18 +128,18 @@ fn merkle_membership(b: &mut BenchmarkRun) {
     // * ============================================
 
     // ? Need to uncomment when doing the verification metrics
-    let program_info =  ProgramInfo::new(program_hash, Kernel::default());
+    // let program_info =  ProgramInfo::new(program_hash, Kernel::default());
     
-    let exec = merkle_verify(program_info, StackInputs::default(), output_stack, execution_proof);
+    // let exec = merkle_verify(program_info, StackInputs::default(), output_stack, execution_proof);
 
-    let sec_level = b.run(exec);
+    // let sec_level = b.run(exec);
 
-    b.log("Security Level", sec_level.try_into().unwrap());
+    // b.log("Security Level", sec_level.try_into().unwrap());
 }
 
 benchy::main!(
     "miden",
     // fibonacci,
-    merkle_tree_merge
+    // merkle_tree_merge,
     // merkle_membership
 );
