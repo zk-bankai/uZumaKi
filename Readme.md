@@ -4,10 +4,10 @@
 <img src="https://static.wikia.nocookie.net/naruto/images/8/89/Uzumaki_Symbol.svg/revision/latest?cb=20180407232103"></img>
 </div>
 
-# Index :
+# Index
 
 - [uZumaKi](#uzumaki)
-- [Index :](#index-)
+- [Index](#index)
 - [Goals](#goals)
 - [Current Benchmarks](#current-benchmarks)
 - [Comparison between ZK Circuit Development Frameworks](#comparison-between-zk-circuit-development-frameworks)
@@ -50,6 +50,14 @@ Benchmarking ZK proofs is not just about performance metrics; it's a comprehensi
 
 # Current Benchmarks
 
+```sh
+System Info :
+-------------
+CPU : Intel i7 12th gen
+RAM : 16 GB
+GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
+```
+
 | Language              | Prover          | Verifier                 | Circuit                | Proving Time                                 | Verifying Time                |
 | --------------------- | --------------- | ------------------------ | ---------------------- | -------------------------------------------- | ----------------------------- |
 | MASM (Miden Assembly) | Miden (Polygon) | Miden_Verifier (Polygon) | Fibonacci              | low : `75.80179` ms, high : `603.645856` ms  | low : `47` ns, high : `49` ns |
@@ -62,44 +70,31 @@ Benchmarking ZK proofs is not just about performance metrics; it's a comprehensi
 
 ### STARKs
 
-- **Cairo**
-  - Arithmetization: AIR
-  - Proving system: Stark
-- **Typescript-like (Polylang)**
-  - Polybase
-- **Rust/C/C++ (Risc Zero)**
-- **Boojum**
-  - Proving system: Stark, ZKSync
-- **Starky**
-  - Arithmetization: AIR
-  - Proving system: Stark, Polygon Zero
+| Prover        | Language                   | Arithmetization | Proving Support |
+| ------------- | -------------------------- | --------------- | --------------- |
+| Platinum      | Cairo                      | AIR             | Stark           |
+| Miden         | PolyLang (typescript-like) | -               | Stark           |
+| RiskZero zkVM | Rust, C , C++              | -               | Stark           |
+| Boojum        | Rust , C , C++             | -               | Stark (zksync)  |
 
 ### SNARKs
 
-- **Noir**
-  - Proving system: Plonk, Aztec
-- **Leo**
-  - Aleo
-- **Rust - crate Bellman**
-  - Arithmetization: R1CS
-  - Proving system: Groth16, Zcash
-- **Circom**
-  - Arithmetization: R1CS
-  - Proving system: Plonk/Groth16
-- **Zokrates**
-  - Arithmetization: R1CS
-- **Chiquito (Python, Rust)**
-- **Snarky (Haskell)**
-  - Consensys/Zerocash
+| Prover          | Language       | Arithmetization | Proving Support |
+| --------------- | -------------- | --------------- | --------------- |
+| Plonk           | Noir           | -               | Snark           |
+| Aleo            | Leo            | -               | Snark           |
+| Groth16         | Bellman (Rust) | R1CS            | Snark           |
+| Groth16         | Circom         | R1CS            | Snark           |
+| Marlin, Groth16 | Zokrates       | R1CS            | Snark           |
 
 ## Low-Level Language
 
 ### STARKs
 
-- **MASM (Miden Assembly)**
-  - Polygon
-- **Risc 5**
-  - Risc
+| Language |
+| -------- |
+| MASM     |
+| Risc 5   |
 
 ## Proof Systems
 
