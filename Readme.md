@@ -26,6 +26,7 @@
   - [Testing Systems Under Heavy Load](#testing-systems-under-heavy-load)
   - [Type of Platform Specification for Testing](#type-of-platform-specification-for-testing)
   - [Future Work](#future-work)
+  - [Benchmarks](#benchmarks)
 - [Resources](#resources)
   - [Github Repositories](#github-repositories)
   - [Articles](#articles)
@@ -47,7 +48,6 @@
 Benchmarking ZK proofs is not just about performance metrics; it's a comprehensive process that evaluates suitability for specific applications, scalability, security, and practicality, thereby guiding the evolving landscape of cryptographic privacy and data integrity solutions.
 
 ![Alt text](./images/image.png)
-
 
 # Current Benchmarks
 
@@ -179,6 +179,14 @@ GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
 - Benchmarking sequencers
 - Benchmarking different zkVMs (e.g., Scroll, Polygon zkEVM, Consensys zkEVM, zkSync, Risc Zero, zkWasm)
 - Benchmarking IR compiler frameworks (e.g., zkLLVM)
+
+## Benchmarks
+
+Miden Starks Fibonacci Prover:
+![Alt text](./images/miden_fibonacci_prover.png)
+
+Miden Starks Fibonacci Verify:
+![Alt text](./images/miden_fibonacci_verify.png)
 
 Map of curves/Fields with Frameworks and languages
 ![Pasted image 20231205101458](https://hackmd.io/_uploads/B1ryJwnB6.png)
