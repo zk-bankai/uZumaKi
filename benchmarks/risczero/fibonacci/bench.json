@@ -10,8 +10,7 @@
             {
               "func": "proving",
               "time": "714",
-              "time_unit": "ms",
-              "proof_len": "55"
+              "time_unit": "ms"
             },
             {
               "func": "verifying",
