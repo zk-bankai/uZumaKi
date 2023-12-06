@@ -1,21 +1,25 @@
 [
   {
-    "proving": {
-      "name": "10-fib",
-      "tracecells": 204800,
-      "hash_count": 843,
-      "commitment_count": 5,
-      "field_element_count": 1126,
-      "data_count": 1,
-      "time_taken": 1.84836,
-      "time_unit": "s"
-    }
-  },
-  {
-    "verifying": {
-      "name": "10-fib",
-      "time_taken": 100,
-      "time_unit": "ns"
-    }
+    "10-fib": [
+      {
+        "proving": {
+          "name": "10-fib",
+          "tracecells": 204800,
+          "hash_count": 843,
+          "commitment_count": 5,
+          "field_element_count": 1126,
+          "data_count": 1,
+          "time_taken": 1.84836,
+          "time_unit": "s"
+        }
+      },
+      {
+        "verifying": {
+          "name": "10-fib",
+          "time_taken": 100,
+          "time_unit": "ns"
+        }
+      }
+    ]
   }
 ]

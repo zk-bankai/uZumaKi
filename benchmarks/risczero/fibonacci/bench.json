@@ -1,0 +1,86 @@
+{
+  "name": "risczero",
+  "results": [
+    {
+      "name": "Fibonacci",
+      "results": [
+        {
+          "name": "fib-10",
+          "metrics": [
+            {
+              "func": "proving",
+              "time": "714",
+              "time_unit": "ms",
+              "proof_len": "55"
+            },
+            {
+              "func": "verifying",
+              "time": "80",
+              "time_unit": "ns"
+            }
+          ]
+        },
+        {
+          "name": "fib-100",
+          "metrics": [
+            {
+              "func": "proving",
+              "time": "688",
+              "time_unit": "ms"
+            },
+            {
+              "func": "verifying",
+              "time": "74",
+              "time_unit": "ns"
+            }
+          ]
+        },
+        {
+          "name": "fib-1000",
+          "metrics": [
+            {
+              "func": "proving",
+              "time": "828",
+              "time_unit": "ms"
+            },
+            {
+              "func": "verifying",
+              "time": "76",
+              "time_unit": "ns"
+            }
+          ]
+        },
+        {
+          "name": "fib-10000",
+          "metrics": [
+            {
+              "func": "proving",
+              "time": "951",
+              "time_unit": "ms"
+            },
+            {
+              "func": "verifying",
+              "time": "89",
+              "time_unit": "ns"
+            }
+          ]
+        },
+        {
+          "name": "fib-100000",
+          "metrics": [
+            {
+              "func": "proving",
+              "time": "3803",
+              "time_unit": "ms"
+            },
+            {
+              "func": "verifying",
+              "time": "85",
+              "time_unit": "ns"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

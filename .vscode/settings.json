@@ -1,6 +1,7 @@
 {
   "rust-analyzer.linkedProjects": [
     "./miden_stark/Cargo.toml",
-    "./shared/Cargo.toml"
+    "./shared/Cargo.toml",
+    "./stone_stark/zk-benchmarks/fib/risc0/Cargo.toml"
   ]
 }
