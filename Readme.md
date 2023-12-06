@@ -46,7 +46,8 @@
 
 Benchmarking ZK proofs is not just about performance metrics; it's a comprehensive process that evaluates suitability for specific applications, scalability, security, and practicality, thereby guiding the evolving landscape of cryptographic privacy and data integrity solutions.
 
-![Pasted image 20231205133256](https://hackmd.io/_uploads/BklKkw2rp.png)
+![Alt text](./images/image.png)
+
 
 # Current Benchmarks
 
@@ -70,22 +71,22 @@ GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
 
 ### STARKs
 
-| Prover        | Language                   | Arithmetization | Proving Support |
-| ------------- | -------------------------- | --------------- | --------------- |
-| Platinum      | Cairo                      | AIR             | Stark           |
-| Miden         | PolyLang (typescript-like) | -               | Stark           |
-| RiskZero zkVM | Rust, C , C++              | -               | Stark           |
-| Boojum        | Rust , C , C++             | -               | Stark (zksync)  |
+| Prover        | Language/Library           | Arithmetization |
+| ------------- | -------------------------- | --------------- |
+| Stone         | Cairo                      | AIR             |
+| Miden         | PolyLang (typescript-like) | -               |
+| RiskZero zkVM | Rust, C , C++              | -               |
+| Boojum(ZKSync)| Rust , C , C++             | -               |
 
 ### SNARKs
 
-| Prover          | Language       | Arithmetization | Proving Support |
-| --------------- | -------------- | --------------- | --------------- |
-| Plonk           | Noir           | -               | Snark           |
-| Aleo            | Leo            | -               | Snark           |
-| Groth16         | Bellman (Rust) | R1CS            | Snark           |
-| Groth16         | Circom         | R1CS            | Snark           |
-| Marlin, Groth16 | Zokrates       | R1CS            | Snark           |
+| Prover          | Language/Library      | Arithmetization |
+| --------------- | --------------------  | --------------- |
+| Plonk           | Noir                  | -               |
+| Aleo            | Leo                   | -               |
+| Groth16         | Bellman (Rust)        | R1CS            |
+| Groth16         | Circom                | R1CS            |
+| Marlin/Groth16  | Zokrates              | R1CS            |
 
 ## Low-Level Language
 
@@ -183,7 +184,7 @@ Map of curves/Fields with Frameworks and languages
 
 Model of UI for circuit benchmarks:
 ![Pasted image 20231204101856](https://hackmd.io/_uploads/H1ibgD2S6.png)
-(https://hackmd.io/_uploads/rkrlJP2B6.png)
+(<https://hackmd.io/_uploads/rkrlJP2B6.png>)
 
 Metric can be time, ram and proof
 
@@ -232,18 +233,38 @@ Qualitative costs
 
 ### Github Repositories
 
-- https://github.com/delendum-xyz/zk-benchmarking
-- https://github.com/zkCollective/zk-Harness
-- https://github.com/celer-network/zk-benchmark
-- https://github.com/polybase/zk-benchmarks
-- https://github.com/delendum-xyz/zk-benchmarking
-- https://github.com/ingonyama-zk/icicle
+- <https://github.com/delendum-xyz/zk-benchmarking>
+- <https://github.com/zkCollective/zk-Harness>
+- <https://github.com/celer-network/zk-benchmark>
+- <https://github.com/polybase/zk-benchmarks>
+- <https://github.com/delendum-xyz/zk-benchmarking>
+- <https://github.com/ingonyama-zk/icicle>
+- C++ CPU Groth16 Prover:
+  <https://github.com/MinaProtocol/snark-challenge-prover-reference>
+- Cuda GPU Groth16 Prover:
+  <https://github.com/MinaProtocol/gpu-groth16-prover-3x>
+- Prize's MSM Implementation:
+  <https://github.com/z-prize/test-msm-gpu>
+- TalDerie Master Research:
+  <https://github.com/TalDerei/Masters-Research>
+- Plonk: Permutations over Lagrange-bases for ecumenical Noninteractive
+Arguments of Knowledge:
+  <https://eprint.iacr.org/2019/953>
+- Barretenberg
+  <https://github.com/AztecProtocol/barretenberg>
+- Ignition-Verification
+  <https://github.com/AztecProtocol/ignition-verification>
 
 ### Articles
 
-- https://ethresear.ch/t/benchmarking-zkp-development-frameworks-the-pantheon-of-zkp/14943
-- https://hackmd.io/@heliax/SJU01u5fs
-- https://eprint.iacr.org/2023/1503
+- <https://ethresear.ch/t/benchmarking-zkp-development-frameworks-the-pantheon-of-zkp/14943>
+- <https://hackmd.io/@heliax/SJU01u5fs>
+- <https://eprint.iacr.org/2023/1503>
+- Aztec's ZK-ZK-Rollup, Looking Behind the Cryptocurtain:
+  <https://medium.com/aztec-protocol/aztecs-zk-zk-rollup-looking-behind-the-crypte>
+curtain-2b8af1fca619
+- Aleo's Prize Competition:
+  <https://www.zprize.io/prizes/accelerating-msm-operations-on-gpu-fpga>
 
 ### Benchmarking
 
