@@ -64,6 +64,7 @@ GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
 | MASM (Miden Assembly) | Miden (Polygon) | Miden_Verifier (Polygon) | Fibonacci              | low : `75.80179` ms, high : `603.645856` ms  | low : `47` ns, high : `49` ns |
 |                       |                 |                          | merkle tree merging    | low : `95.690374` ms, high : `211.495254` ms | low : `57` ns, high : `62` ns |
 |                       |                 |                          | merkle tree membership | `79.863758` ms                               | `47` ns                       |
+| Cairo-0               | Stone           | Stone                    | Fibonacci              | `1.84836` s                                  | 100 ns                        |
 
 # Comparison between ZK Circuit Development Frameworks
 
