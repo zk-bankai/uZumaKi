@@ -1,5 +1,5 @@
 [package]
-name = "uzumaki"
+name = "miden_stark"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,9 +8,10 @@ miden-vm = { git = "https://github.com/0xPolygonMiden/miden-vm", tag = "v0.6.1" 
 miden-processor = { git = "https://github.com/0xPolygonMiden/miden-vm", tag = "v0.6.1" }
 miden-stdlib = { git = "https://github.com/0xPolygonMiden/miden-vm", tag = "v0.6.1" }
 miden-prover = { git = "https://github.com/0xPolygonMiden/miden-vm", tag = "v0.6.1" }
+miden-verifier = { git = "https://github.com/0xPolygonMiden/miden-vm", tag = "v0.6.1" }
 miden-crypto = "0.6"
 zstd = "0.12.4"
-# shared = { path = "../shared", features = ["std"] }
+shared = { path = "../shared", features = ["std"] }
 
 [dev-dependencies]
 benchy = "0.1.1"

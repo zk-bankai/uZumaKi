@@ -1,8 +1,11 @@
 use miden::{Assembler, ProofOptions};
-use miden_processor::{AdviceInputs, MemAdviceProvider, StackInputs, VmStateIterator};
+// use miden_crypto::hash::Digest;
+use miden_processor::{AdviceInputs, MemAdviceProvider, StackInputs, VmStateIterator, StackOutputs, ProgramInfo};
 use miden_prover::ExecutionProof;
+use miden::crypto::RpoDigest;
 
-pub fn fib(n: u32) -> (impl Fn() -> ExecutionProof, VmStateIterator) {
+
+pub fn fib(n: u32) -> (impl Fn() -> (StackOutputs, ExecutionProof), (VmStateIterator, RpoDigest)) {
     let code = format!(
         r#"
         begin
@@ -14,11 +17,12 @@ pub fn fib(n: u32) -> (impl Fn() -> ExecutionProof, VmStateIterator) {
         end
     "#
     );
-
+ 
     let assembler = Assembler::default()
         .with_library(&miden_stdlib::StdLibrary::default())
         .unwrap();
     let program = assembler.compile(code).unwrap();
+    let program_hash = program.hash().clone();
     let advice_provider = MemAdviceProvider::from(
         AdviceInputs::default()
             .with_stack_values(vec![n as u64])
@@ -37,8 +41,30 @@ pub fn fib(n: u32) -> (impl Fn() -> ExecutionProof, VmStateIterator) {
             )
             .unwrap();
 
-            proof
+            (_stack,proof)
         },
-        vm,
+        (vm,program_hash)
     )
+}
+
+
+pub fn fib_verify(program_info : ProgramInfo, stack_inputs : StackInputs, stack_outputs: StackOutputs, execution_proof : ExecutionProof) -> impl Fn() -> u32 {
+
+    let v_res = miden_verifier::verify(program_info, stack_inputs, stack_outputs, execution_proof);
+
+
+    let err_code = 0;
+    let res;
+
+    match v_res {
+        Ok(sec_level) => {
+            res = sec_level;
+        },
+        Err(err) => {
+            println!("Error : {}", err);
+            res = err_code;
+        }
+    }
+
+    move || res
 }

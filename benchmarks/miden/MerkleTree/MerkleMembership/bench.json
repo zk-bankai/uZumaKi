@@ -1,0 +1,23 @@
+{
+  "name": "miden",
+  "results": [
+    {
+      "name": "Merkle Membership",
+      "results": [
+        {
+          "metrics": {
+            "compressed_proof_size_bytes": 48910,
+            "cycles": 215,
+            "memory_usage_bytes": 10918297,
+            "proof_size_bytes": 48901
+          },
+          "name": "Merkle Membership",
+          "time": {
+            "nanos": 79863758,
+            "secs": 0
+          }
+        }
+      ]
+    }
+  ]
+}

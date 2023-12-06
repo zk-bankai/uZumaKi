@@ -1,4 +1,37 @@
-# Uzumaki Benchmarking Suite
+# uZumaKi
+
+<div align='center'>
+<img src="https://static.wikia.nocookie.net/naruto/images/8/89/Uzumaki_Symbol.svg/revision/latest?cb=20180407232103"></img>
+</div>
+
+# Index
+
+- [uZumaKi](#uzumaki)
+- [Index](#index)
+- [Goals](#goals)
+- [Current Benchmarks](#current-benchmarks)
+- [Comparison between ZK Circuit Development Frameworks](#comparison-between-zk-circuit-development-frameworks)
+  - [High-Level Language/DSL](#high-level-languagedsl)
+    - [STARKs](#starks)
+    - [SNARKs](#snarks)
+  - [Low-Level Language](#low-level-language)
+    - [STARKs](#starks-1)
+  - [Proof Systems](#proof-systems)
+  - [Groth16 Frameworks](#groth16-frameworks)
+  - [Plonk Frameworks](#plonk-frameworks)
+  - [Arithmetic Operations](#arithmetic-operations)
+  - [Elliptic Curve Operations](#elliptic-curve-operations)
+  - [DSL circuit Benchmarks without proving system](#dsl-circuit-benchmarks-without-proving-system)
+  - [Assessments](#assessments)
+  - [Testing Systems Under Heavy Load](#testing-systems-under-heavy-load)
+  - [Type of Platform Specification for Testing](#type-of-platform-specification-for-testing)
+  - [Future Work](#future-work)
+- [Resources](#resources)
+  - [Github Repositories](#github-repositories)
+  - [Articles](#articles)
+  - [Benchmarking](#benchmarking)
+
+# Goals
 
 1. **Variety of Systems**: Numerous ZK proof systems exist, each with unique features and optimizations, necessitating a method for comparison.
 2. **Targeted Applications**: Different systems are tailored for specific use cases, making benchmarking essential to identify the best fit for a particular application.
@@ -13,7 +46,25 @@
 
 Benchmarking ZK proofs is not just about performance metrics; it's a comprehensive process that evaluates suitability for specific applications, scalability, security, and practicality, thereby guiding the evolving landscape of cryptographic privacy and data integrity solutions.
 
-![Pasted image 20231205133256](https://hackmd.io/_uploads/BklKkw2rp.png)
+![Alt text](./images/image.png)
+
+
+# Current Benchmarks
+
+```sh
+System Info :
+-------------
+CPU : Intel i7 12th gen
+RAM : 16 GB
+GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
+```
+
+| Language              | Prover          | Verifier                 | Circuit                | Proving Time                                 | Verifying Time                |
+| --------------------- | --------------- | ------------------------ | ---------------------- | -------------------------------------------- | ----------------------------- |
+| MASM (Miden Assembly) | Miden (Polygon) | Miden_Verifier (Polygon) | Fibonacci              | low : `75.80179` ms, high : `603.645856` ms  | low : `47` ns, high : `49` ns |
+|                       |                 |                          | merkle tree merging    | low : `95.690374` ms, high : `211.495254` ms | low : `57` ns, high : `62` ns |
+|                       |                 |                          | merkle tree membership | `79.863758` ms                               | `47` ns                       |
+| Cairo-0               | Stone           | Stone                    | Fibonacci              | `1.84836` s                                  | 100 ns                        |
 
 # Comparison between ZK Circuit Development Frameworks
 
@@ -21,44 +72,31 @@ Benchmarking ZK proofs is not just about performance metrics; it's a comprehensi
 
 ### STARKs
 
-- **Cairo**
-  - Arithmetization: AIR
-  - Proving system: Stark
-- **Typescript-like (Polylang)**
-  - Polybase
-- **Rust/C/C++ (Risc Zero)**
-- **Boojum**
-  - Proving system: Stark, ZKSync
-- **Starky**
-  - Arithmetization: AIR
-  - Proving system: Stark, Polygon Zero
+| Prover        | Language/Library           | Arithmetization |
+| ------------- | -------------------------- | --------------- |
+| Stone         | Cairo                      | AIR             |
+| Miden         | PolyLang (typescript-like) | -               |
+| RiskZero zkVM | Rust, C , C++              | -               |
+| Boojum(ZKSync)| Rust , C , C++             | -               |
 
 ### SNARKs
 
-- **Noir**
-  - Proving system: Plonk, Aztec
-- **Leo**
-  - Aleo
-- **Rust - crate Bellman**
-  - Arithmetization: R1CS
-  - Proving system: Groth16, Zcash
-- **Circom**
-  - Arithmetization: R1CS
-  - Proving system: Plonk/Groth16
-- **Zokrates**
-  - Arithmetization: R1CS
-- **Chiquito (Python, Rust)**
-- **Snarky (Haskell)**
-  - Consensys/Zerocash
+| Prover          | Language/Library      | Arithmetization |
+| --------------- | --------------------  | --------------- |
+| Plonk           | Noir                  | -               |
+| Aleo            | Leo                   | -               |
+| Groth16         | Bellman (Rust)        | R1CS            |
+| Groth16         | Circom                | R1CS            |
+| Marlin/Groth16  | Zokrates              | R1CS            |
 
 ## Low-Level Language
 
 ### STARKs
 
-- **MASM (Miden Assembly)**
-  - Polygon
-- **Risc 5**
-  - Risc
+| Language |
+| -------- |
+| MASM     |
+| Risc 5   |
 
 ## Proof Systems
 
@@ -147,7 +185,7 @@ Map of curves/Fields with Frameworks and languages
 
 Model of UI for circuit benchmarks:
 ![Pasted image 20231204101856](https://hackmd.io/_uploads/H1ibgD2S6.png)
-(https://hackmd.io/_uploads/rkrlJP2B6.png)
+(<https://hackmd.io/_uploads/rkrlJP2B6.png>)
 
 Metric can be time, ram and proof
 
@@ -196,18 +234,38 @@ Qualitative costs
 
 ### Github Repositories
 
-- https://github.com/delendum-xyz/zk-benchmarking
-- https://github.com/zkCollective/zk-Harness
-- https://github.com/celer-network/zk-benchmark
-- https://github.com/polybase/zk-benchmarks
-- https://github.com/delendum-xyz/zk-benchmarking
-- https://github.com/ingonyama-zk/icicle
+- <https://github.com/delendum-xyz/zk-benchmarking>
+- <https://github.com/zkCollective/zk-Harness>
+- <https://github.com/celer-network/zk-benchmark>
+- <https://github.com/polybase/zk-benchmarks>
+- <https://github.com/delendum-xyz/zk-benchmarking>
+- <https://github.com/ingonyama-zk/icicle>
+- C++ CPU Groth16 Prover:
+  <https://github.com/MinaProtocol/snark-challenge-prover-reference>
+- Cuda GPU Groth16 Prover:
+  <https://github.com/MinaProtocol/gpu-groth16-prover-3x>
+- Prize's MSM Implementation:
+  <https://github.com/z-prize/test-msm-gpu>
+- TalDerie Master Research:
+  <https://github.com/TalDerei/Masters-Research>
+- Plonk: Permutations over Lagrange-bases for ecumenical Noninteractive
+Arguments of Knowledge:
+  <https://eprint.iacr.org/2019/953>
+- Barretenberg
+  <https://github.com/AztecProtocol/barretenberg>
+- Ignition-Verification
+  <https://github.com/AztecProtocol/ignition-verification>
 
 ### Articles
 
-- https://ethresear.ch/t/benchmarking-zkp-development-frameworks-the-pantheon-of-zkp/14943
-- https://hackmd.io/@heliax/SJU01u5fs
-- https://eprint.iacr.org/2023/1503
+- <https://ethresear.ch/t/benchmarking-zkp-development-frameworks-the-pantheon-of-zkp/14943>
+- <https://hackmd.io/@heliax/SJU01u5fs>
+- <https://eprint.iacr.org/2023/1503>
+- Aztec's ZK-ZK-Rollup, Looking Behind the Cryptocurtain:
+  <https://medium.com/aztec-protocol/aztecs-zk-zk-rollup-looking-behind-the-crypte>
+curtain-2b8af1fca619
+- Aleo's Prize Competition:
+  <https://www.zprize.io/prizes/accelerating-msm-operations-on-gpu-fpga>
 
 ### Benchmarking
 
