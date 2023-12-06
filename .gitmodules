@@ -1,0 +1,3 @@
+[submodule "stone_stark/zk-benchmarks"]
+	path = stone_stark/zk-benchmarks
+	url = https://github.com/lambdaclass/zk-benchmarks
