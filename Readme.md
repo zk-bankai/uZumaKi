@@ -1,4 +1,4 @@
-# uZumaKi
+# uZumaKi Benchmarking Suite
 
 <div align='center'>
 <img src="https://static.wikia.nocookie.net/naruto/images/8/89/Uzumaki_Symbol.svg/revision/latest?cb=20180407232103"></img>
@@ -6,7 +6,7 @@
 
 # Index
 
-- [uZumaKi](#uzumaki)
+- [uZumaKi Benchmarking Suite](#uzumaki-benchmarking-suite)
 - [Index](#index)
 - [Goals](#goals)
 - [Current Benchmarks](#current-benchmarks)
@@ -198,22 +198,11 @@ Model of UI for circuit benchmarks:
 
 Metric can be time, ram and proof
 
-Output graph
-![Pasted image 20231204101916](https://hackmd.io/_uploads/SJhM1w2r6.png)
-
-Stats:
-![Pasted image 20231204101940](https://hackmd.io/_uploads/B1Z7yPnBp.png)
-
 Arithmetic Backends
 ![Pasted image 20231204102116](https://hackmd.io/_uploads/B1xAJvnra.png)
-Output Graph:
-![Pasted image 20231204102136](https://hackmd.io/_uploads/rywE1P2rT.png)
 
 Elliptic curve benchmarks
 ![Pasted image 20231204102218](https://hackmd.io/_uploads/ByT4Jw2rT.png)
-
-Output graph
-![Pasted image 20231204102239](https://hackmd.io/_uploads/BkfSJP3Bp.png)
 
 TBD:
 Quantitive costs
