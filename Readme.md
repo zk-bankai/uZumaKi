@@ -59,12 +59,13 @@ RAM : 16 GB
 GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
 ```
 
-| Language              | Prover          | Verifier                 | Circuit                | Proving Time                                 | Verifying Time                |
-| --------------------- | --------------- | ------------------------ | ---------------------- | -------------------------------------------- | ----------------------------- |
-| MASM (Miden Assembly) | Miden (Polygon) | Miden_Verifier (Polygon) | Fibonacci              | low : `75.80179` ms, high : `603.645856` ms  | low : `47` ns, high : `49` ns |
-|                       |                 |                          | merkle tree merging    | low : `95.690374` ms, high : `211.495254` ms | low : `57` ns, high : `62` ns |
-|                       |                 |                          | merkle tree membership | `79.863758` ms                               | `47` ns                       |
-| Cairo-0               | Stone           | Stone                    | Fibonacci              | `1.84836` s                                  | 100 ns                        |
+| Language              | Prover          | Verifier                 | Circuit                | Proving Time                                 | Verifying Time                | Proof Type |
+| --------------------- | --------------- | ------------------------ | ---------------------- | -------------------------------------------- | ----------------------------- | ---------- |
+| MASM (Miden Assembly) | Miden (Polygon) | Miden_Verifier (Polygon) | Fibonacci              | low : `75.80179` ms, high : `603.645856` ms  | low : `47` ns, high : `49` ns | STARK      |
+|                       |                 |                          | merkle tree merging    | low : `95.690374` ms, high : `211.495254` ms | low : `57` ns, high : `62` ns | STARK      |
+|                       |                 |                          | merkle tree membership | `79.863758` ms                               | `47` ns                       | STARK      |
+| Cairo-0               | Stone           | Stone                    | Fibonacci              | `1.84836` s                                  | 100 ns                        | STARK      |
+| Rust                  | RiscZero VM     | RiscZero Verifier        | Fibonacci              | low: `714` ms, high : `3803` ms              | low : `74` ns, high : `89` ns | STARK      |
 
 # Comparison between ZK Circuit Development Frameworks
 
@@ -72,22 +73,22 @@ GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
 
 ### STARKs
 
-| Prover        | Language/Library           | Arithmetization |
-| ------------- | -------------------------- | --------------- |
-| Stone         | Cairo                      | AIR             |
-| Miden         | PolyLang (typescript-like) | -               |
-| RiskZero zkVM | Rust, C , C++              | -               |
-| Boojum(ZKSync)| Rust , C , C++             | -               |
+| Prover         | Language/Library           | Arithmetization |
+| -------------- | -------------------------- | --------------- |
+| Stone          | Cairo                      | AIR             |
+| Miden          | PolyLang (typescript-like) | -               |
+| RiskZero zkVM  | Rust, C , C++              | -               |
+| Boojum(ZKSync) | Rust , C , C++             | -               |
 
 ### SNARKs
 
-| Prover          | Language/Library      | Arithmetization |
-| --------------- | --------------------  | --------------- |
-| Plonk           | Noir                  | -               |
-| Aleo            | Leo                   | -               |
-| Groth16         | Bellman (Rust)        | R1CS            |
-| Groth16         | Circom                | R1CS            |
-| Marlin/Groth16  | Zokrates              | R1CS            |
+| Prover         | Language/Library | Arithmetization |
+| -------------- | ---------------- | --------------- |
+| Plonk          | Noir             | -               |
+| Aleo           | Leo              | -               |
+| Groth16        | Bellman (Rust)   | R1CS            |
+| Groth16        | Circom           | R1CS            |
+| Marlin/Groth16 | Zokrates         | R1CS            |
 
 ## Low-Level Language
 
@@ -257,7 +258,7 @@ Qualitative costs
 - TalDerie Master Research:
   <https://github.com/TalDerei/Masters-Research>
 - Plonk: Permutations over Lagrange-bases for ecumenical Noninteractive
-Arguments of Knowledge:
+  Arguments of Knowledge:
   <https://eprint.iacr.org/2019/953>
 - Barretenberg
   <https://github.com/AztecProtocol/barretenberg>
@@ -271,7 +272,7 @@ Arguments of Knowledge:
 - <https://eprint.iacr.org/2023/1503>
 - Aztec's ZK-ZK-Rollup, Looking Behind the Cryptocurtain:
   <https://medium.com/aztec-protocol/aztecs-zk-zk-rollup-looking-behind-the-crypte>
-curtain-2b8af1fca619
+  curtain-2b8af1fca619
 - Aleo's Prize Competition:
   <https://www.zprize.io/prizes/accelerating-msm-operations-on-gpu-fpga>
 
