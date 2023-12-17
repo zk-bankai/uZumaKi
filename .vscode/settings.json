@@ -2,6 +2,11 @@
   "rust-analyzer.linkedProjects": [
     "./miden_stark/Cargo.toml",
     "./shared/Cargo.toml",
-    "./stone_stark/zk-benchmarks/fib/risc0/Cargo.toml"
-  ]
+    "./risc_zero_stark/Cargo.toml",
+    "./risc_zero_stark/methods/guest/Cargo.toml",
+    "./risc_zero_stark/methods/guest/Cargo.toml",
+    "./risc_zero_stark/host/Cargo.toml"
+  ],
+  "cmake.configureOnOpen": false,
+  "rust-analyzer.showUnlinkedFileNotification": false
 }
