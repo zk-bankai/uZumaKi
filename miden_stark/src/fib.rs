@@ -10,9 +10,17 @@ pub fn fib(n: u32) -> (impl Fn() -> (StackOutputs, ExecutionProof), (VmStateIter
         r#"
         begin
             push.0
+            push.0
+            push.0
             push.1
             repeat.{n}
-                swap dup.1 add
+                dup
+                movup.3
+                u32overflowing_add
+                dup.3
+                movup.4
+                u32overflowing_add3
+                drop
             end
         end
     "#
