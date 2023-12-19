@@ -17,6 +17,9 @@ pub fn provably_fib(input: &u32) -> impl FnMut() -> (Journal, Receipt) {
         let receipt = prover.prove_elf(env.clone(), elf).unwrap();
         println!(">>> Receipt Generated");
         println!("{:?}", receipt.journal);
+
+        let d: u64 = receipt.journal.decode().unwrap();
+        println!("decoded : {}", d);
         
         let journal = receipt.journal.clone();
         (journal, receipt)
@@ -39,7 +42,7 @@ pub fn verify_fib(receipt: Receipt) {
 fn main() {
     env_logger::init();
     
-    let input: u32 = 10;
+    let input: u32 = 100;
 
     // println!("ELF : {:?}, ID : {:?}", FIB_ELF, FIB_ID);
 
