@@ -14,7 +14,7 @@ pub fn provably_fib(input: &u32) -> impl FnMut() -> (Journal, Receipt) {
         let receipt: Receipt = prover.prove_elf(env.clone(), elf).unwrap();
         println!(">>> Receipt Generated");
         println!("{:?}", receipt.journal);
-        
+
         let journal = receipt.journal.clone();
         (journal, receipt)
     }
