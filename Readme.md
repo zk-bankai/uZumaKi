@@ -8,9 +8,9 @@
 
 - [uZumaKi Benchmarking Suite](#uzumaki-benchmarking-suite)
 - [Index](#index)
-- [About](#about)
+- [About uZumaKi](#about-uzumaki)
 - [Vision](#vision)
-- [OpenSource & Community-Driven](#opensource&community-driven)
+- [OpenSource \& Community-Driven](#opensource--community-driven)
 - [Goals](#goals)
 - [Current Benchmarks](#current-benchmarks)
 - [Comparison between ZK Circuit Development Frameworks](#comparison-between-zk-circuit-development-frameworks)
@@ -26,28 +26,35 @@
   - [Elliptic Curve Operations](#elliptic-curve-operations)
   - [DSL circuit Benchmarks without proving system](#dsl-circuit-benchmarks-without-proving-system)
   - [Assessments](#assessments)
+  - [Additional Assesments](#additional-assesments)
+    - [1. Apple to Apple comparison between different hardware systems](#1-apple-to-apple-comparison-between-different-hardware-systems)
+    - [2. Comprehensive Power Efficiency Analysis:](#2-comprehensive-power-efficiency-analysis)
+    - [3. Hardware and System Diversity:](#3-hardware-and-system-diversity)
   - [Testing Systems Under Heavy Load](#testing-systems-under-heavy-load)
   - [Type of Platform Specification for Testing](#type-of-platform-specification-for-testing)
   - [Future Work](#future-work)
   - [Benchmarks](#benchmarks)
+- [Get Involved](#get-involved)
 - [Resources](#resources)
   - [Github Repositories](#github-repositories)
   - [Articles](#articles)
   - [Benchmarking](#benchmarking)
 
-# About uZumaKi 
+# About uZumaKi
+
 Uzumak is an open-source benchmarking suite for zero-knowledge (ZK) proof systems. Our goal is to provide standardized benchmarks and comparative analyses to drive innovation and adoption of ZK technologies.
 As the ZK ecosystem grows rapidly, the lack of consistent benchmarking makes it challenging for developers to compare different languages, compilers, provers, and other components. Uzumak aims to solve this by offering a comprehensive benchmarking methodology.
 This will allow benchmarking across multiple proving systems, DSL, sequencers and also provide hardware agnostic comparison using modular multiplcation to provide an apple to apple comparison.
 
 # Vision
+
 We envision Uzumak becoming an industry standard for evaluating performance and capabilities across the full spectrum of ZK systems. Whether companies are building core protocol components or integrating ZK proofs into products, Uzumak benchmarks will help guide technical decision making.
 In the long-term, we believe widespread benchmarking will accelerate real-world ZK adoption, enabling more private and secure data collaboration across industries. Uzumak strives to play a key role in realizing this future.
 
 # OpenSource & Community-Driven
+
 Uzumak is fully open-source and community-driven by a team of ZK enthusiasts spanning industry and academia. We welcome constructive ideas and participation from the broader community.
 Together, we can create benchmarking standards that keep pace with rapidly evolving ZK innovations, providing the insights needed to turn cryptographic research into tomorrow's privacy infrastructure.
-
 
 # Goals
 
@@ -76,13 +83,16 @@ RAM : 16 GB
 GPU : NVIDIA 4050 6 GB, Intel Graphics Driver 6 GB
 ```
 
-| Language              | Prover          | Verifier                 | Circuit                | Proving Time                                 | Verifying Time                | Proof Type |
-| --------------------- | --------------- | ------------------------ | ---------------------- | -------------------------------------------- | ----------------------------- | ---------- |
-| MASM (Miden Assembly) | Miden (Polygon) | Miden_Verifier (Polygon) | Fibonacci              | low : `75.80179` ms, high : `603.645856` ms  | low : `47` ns, high : `49` ns | STARK      |
-|                       |                 |                          | merkle tree merging    | low : `95.690374` ms, high : `211.495254` ms | low : `57` ns, high : `62` ns | STARK      |
-|                       |                 |                          | merkle tree membership | `79.863758` ms                               | `47` ns                       | STARK      |
-| Cairo-0               | Stone           | Stone                    | Fibonacci              | `1.84836` s                                  | 100 ns                        | STARK      |
-| Rust                  | RiscZero VM     | RiscZero Verifier        | Fibonacci              | low: `714` ms, high : `3803` ms              | low : `74` ns, high : `89` ns | STARK      |
+| Language              | Prover          | Verifier                 | Circuit                | Proving Time                                 | Verifying Time                | Proof Type | ENV            |
+| --------------------- | --------------- | ------------------------ | ---------------------- | -------------------------------------------- | ----------------------------- | ---------- | -------------- |
+| MASM (Miden Assembly) | Miden (Polygon) | Miden_Verifier (Polygon) | Fibonacci              | low : `75.80179` ms, high : `603.645856` ms  | low : `47` ns, high : `49` ns | STARK      | local-exec     |
+|                       |                 |                          | merkle tree merging    | low : `95.690374` ms, high : `211.495254` ms | low : `57` ns, high : `62` ns | STARK      |                |
+|                       |                 |                          | merkle tree membership | `79.863758` ms                               | `47` ns                       | STARK      |                |
+| Cairo-0               | Stone           | Stone                    | Fibonacci              | `1.84836` s                                  | 100 ns                        | STARK      | local-exec     |
+| Rust                  | RiscZero VM     | RiscZero Verifier        | Fibonacci              | low: `10` s, high : `199` s                  | low : `44` ns, high : `63` ns | STARK      | prod-proof-gen |
+
+`IMP` : `prod-proof-gen` are the real benchmarks that are taken in prod env
+`local-exec` : Local run of the function with benchmarking tool.
 
 # Comparison between ZK Circuit Development Frameworks
 
@@ -189,13 +199,14 @@ Modular Arithmetic Focus: Prioritize modular multiplication operations per secon
 Field-Specific Benchmarks: Include benchmarks for different field sizes (e.g., 256-bit, 384-bit) to capture performance nuances across various cryptographic fields.
 
 ### 2. Comprehensive Power Efficiency Analysis:
+
 MMOPS/Watt Metric: Adopt a standardized MMOPS/Watt metric for a direct comparison of power efficiency across different hardware setups.
 Total Cost of Ownership (TCO): Include a more detailed analysis of TCO, factoring in hardware costs, operational expenses, and potential resale values to provide a holistic view of economic efficiency.
 
 ### 3. Hardware and System Diversity:
+
 Diverse Hardware Testing: Test ZKP systems on a variety of hardware, including CPUs, GPUs, FPGAs, and ASICs, to understand performance across different computational platforms.
 System Scalability Analysis: Assess how systems scale with increased complexity and workload, providing insights into their real-world applicability.
-
 
 ## Testing Systems Under Heavy Load
 
@@ -240,10 +251,11 @@ Elliptic curve benchmarks
 ![Pasted image 20231204102218](https://hackmd.io/_uploads/ByT4Jw2rT.png)
 
 # Get Involved
+
 We are on a quest to revolutionize how ZK technology is evaluated and perceived. If you share our passion for advancing ZK proofs, we welcome your expertise, ideas, and participation. Together, we can forge a path towards a more private, secure, and efficient digital world.
 Things on the roadmap for community:
-- To create issues and tasks for community to contribute and make it better
 
+- To create issues and tasks for community to contribute and make it better
 
 # Resources
 
