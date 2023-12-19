@@ -21,6 +21,7 @@ pub fn fib(n: u32) -> (impl Fn() -> (StackOutputs, ExecutionProof), (VmStateIter
                 movup.4
                 u32overflowing_add3
                 drop
+                swap
             end
         end
     "#
