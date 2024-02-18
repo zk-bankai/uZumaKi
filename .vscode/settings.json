@@ -8,5 +8,6 @@
     "./risc_zero_stark/host/Cargo.toml"
   ],
   "cmake.configureOnOpen": false,
-  "rust-analyzer.showUnlinkedFileNotification": false
+  "rust-analyzer.showUnlinkedFileNotification": false,
+  "cSpell.words": ["Arithmetization"]
 }
