@@ -21,26 +21,34 @@
   - [Type of Platform Specification for Testing](#type-of-platform-specification-for-testing)
   - [Future Work](#future-work)
 
+## Notation
+
+```sh
+🌀 : Demo phase
+⭕ : To start
+✅ : completed
+```
+
 ## High-Level Language/DSL
 
 ### STARKs
 
-| Prover         | Language/Library           | Arithmetization |
-| -------------- | -------------------------- | --------------- |
-| Stone          | Cairo                      | AIR             |
-| Miden          | PolyLang (typescript-like) | -               |
-| RiskZero zkVM  | Rust, C , C++              | -               |
-| Boojum(ZKSync) | Rust , C , C++             | -               |
+| Prover         | Language/Library           | Arithmetization | Status |
+| -------------- | -------------------------- | --------------- | ------ |
+| Stone          | Cairo                      | AIR             | 🌀     |
+| Miden          | PolyLang (typescript-like) | -               | 🌀     |
+| RiskZero zkVM  | Rust, C , C++              | -               | 🌀     |
+| Boojum(ZKSync) | Rust , C , C++             | -               | ⭕     |
 
 ### SNARKs
 
-| Prover         | Language/Library | Arithmetization |
-| -------------- | ---------------- | --------------- |
-| Plonk          | Noir             | -               |
-| Aleo           | Leo              | -               |
-| Groth16        | Bellman (Rust)   | R1CS            |
-| Groth16        | Circom           | R1CS            |
-| Marlin/Groth16 | Zokrates         | R1CS            |
+| Prover         | Language/Library | Arithmetization | Status |
+| -------------- | ---------------- | --------------- | ------ |
+| Plonk          | Noir             | -               | ⭕     |
+| Aleo           | Leo              | -               | ⭕     |
+| Groth16        | Bellman (Rust)   | R1CS            | ⭕     |
+| Groth16        | Circom           | R1CS            | ⭕     |
+| Marlin/Groth16 | Zokrates         | R1CS            | ⭕     |
 
 ## Low-Level Language
 

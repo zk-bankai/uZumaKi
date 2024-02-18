@@ -55,7 +55,7 @@ Benchmarking ZK proofs is not just about performance metrics; it's a comprehensi
 
 ## Current Benchmarks
 
-![Current_Benchmarks](./benchmarks/Readme.md)
+[Current_Benchmarks](./benchmarks/Readme.md)
 
 ## Roadmap
 
