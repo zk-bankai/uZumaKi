@@ -8,6 +8,7 @@ use shared::{
     Tree,
 };
 
+
 pub fn membership(
     path: Vec<<Rpo as HashFn>::Digest>,
     digest: <Rpo as HashFn>::Digest,
