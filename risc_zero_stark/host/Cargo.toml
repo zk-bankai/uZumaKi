@@ -9,6 +9,7 @@ risc0-zkvm = { version = "0.20.1" }
 env_logger = "0.10"
 serde = "1.0"
 benchy = "0.1.1"
+cargo-risczero = "0.20.1"
 
 [[bench]]
 harness = false
