@@ -2,16 +2,17 @@ use methods::{FIB_ELF, FIB_ID};
 use risc0_zkvm::{default_prover, ExecutorEnv, Receipt, Journal};
 
 
-pub fn provably_fib(input: &u32) -> impl FnMut() -> (Journal, Receipt) {
-    let env: ExecutorEnv<'_> = ExecutorEnv::builder().write(&input).unwrap().build().unwrap();
-    println!(">>> ENV init for prover execution");
+pub fn provably_fib(input: &u32) -> impl FnMut() -> (Journal, Receipt) + '_ {
     let elf = FIB_ELF;
 
     move || {
+        let env = ExecutorEnv::builder().write(input).unwrap().build().unwrap();
+        println!(">>> ENV init for prover execution");
+
         let prover = default_prover();
         println!(">>> Prover init (default)");
         
-        let receipt: Receipt = prover.prove_elf(env.clone(), elf).unwrap();
+        let receipt: Receipt = prover.prove(env, elf).unwrap();
         println!(">>> Receipt Generated");
         println!("{:?}", receipt.journal);
 
