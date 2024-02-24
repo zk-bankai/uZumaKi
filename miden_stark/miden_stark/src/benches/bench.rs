@@ -180,8 +180,8 @@ fn merkle_membership(b: &mut BenchmarkRun) {
 
 benchy::main!(
     "miden",
-    fibonacci,
-    fibonacci_verification
+    // fibonacci,
+    // fibonacci_verification
     // merkle_tree_merge,
-    // merkle_membership
+    merkle_membership
 );

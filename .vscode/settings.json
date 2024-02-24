@@ -1,11 +1,8 @@
 {
   "rust-analyzer.linkedProjects": [
-    "./miden_stark/Cargo.toml",
-    "./shared/Cargo.toml",
-    "./risc_zero_stark/Cargo.toml",
-    "./risc_zero_stark/methods/guest/Cargo.toml",
-    "./risc_zero_stark/methods/guest/Cargo.toml",
-    "./risc_zero_stark/host/Cargo.toml"
+    "./risc_zero_stark/risc_zero_fib/Cargo.toml",
+    "./risc_zero_stark/risc_zero_merkle/Cargo.toml",
+    "./miden_stark/miden_stark/Cargo.toml"
   ],
   "cmake.configureOnOpen": false,
   "rust-analyzer.showUnlinkedFileNotification": false,

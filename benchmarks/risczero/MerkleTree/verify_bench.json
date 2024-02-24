@@ -1,0 +1,50 @@
+{
+  "name": "risczero",
+  "results": [
+    {
+      "name": "MerkleTreeMembershipVerification",
+      "results": [
+        {
+          "metrics": {
+            "memory_usage_bytes": 0
+          },
+          "name": "Number of tree nodes : 5",
+          "time": {
+            "nanos": 61,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "memory_usage_bytes": 0
+          },
+          "name": "Number of tree nodes : 10",
+          "time": {
+            "nanos": 76,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "memory_usage_bytes": 0
+          },
+          "name": "Number of tree nodes : 100",
+          "time": {
+            "nanos": 60,
+            "secs": 0
+          }
+        },
+        {
+          "metrics": {
+            "memory_usage_bytes": 0
+          },
+          "name": "Number of tree nodes : 1000",
+          "time": {
+            "nanos": 61,
+            "secs": 0
+          }
+        }
+      ]
+    }
+  ]
+}

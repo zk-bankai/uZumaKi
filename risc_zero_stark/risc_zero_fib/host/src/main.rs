@@ -33,11 +33,12 @@ pub fn verify_fib(receipt: Receipt) {
             println!("Proof Verified Successfully");
         }
         Err(e) => {
-            println!("Erro in proof verification");
+            println!("Error in proof verification");
             println!("{}", e);
         }
     }
 }
+
 
 fn main() {
     env_logger::init();
