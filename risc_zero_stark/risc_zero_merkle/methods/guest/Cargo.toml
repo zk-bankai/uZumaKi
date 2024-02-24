@@ -1,0 +1,17 @@
+[package]
+name = "merkle"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[build-dependencies]
+risc0-build = "0.20.1"
+
+[dependencies]
+risc0-zkvm = { version = "0.20.1", default-features = false, features = ["std"] }
+merkle-tree = { path = "../../core" }
+
+[profile.release]
+lto = true
+opt-level = 3

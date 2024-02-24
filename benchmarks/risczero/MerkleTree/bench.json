@@ -1,0 +1,51 @@
+{
+    "name": "risczero",
+    "results": [
+      {
+        "name": "MerkleTreeMembership",
+        "results": [
+          {
+            "metrics": {
+              "memory_usage_bytes": 9170944
+            },
+            "name": "Number of tree nodes : 5",
+            "time": {
+              "nanos": 726129920,
+              "secs": 19
+            }
+          },
+          {
+            "metrics": {
+              "memory_usage_bytes": 9113600
+            },
+            "name": "Number of tree nodes : 10",
+            "time": {
+              "nanos": 131689695,
+              "secs": 21
+            }
+          },
+          {
+            "metrics": {
+              "memory_usage_bytes": 9142272
+            },
+            "name": "Number of tree nodes : 100",
+            "time": {
+              "nanos": 641901595,
+              "secs": 83
+            }
+          },
+          {
+            "metrics": {
+              "memory_usage_bytes": 9105408
+            },
+            "name": "Number of tree nodes : 1000",
+            "time": {
+              "nanos": 30831719,
+              "secs": 749
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
