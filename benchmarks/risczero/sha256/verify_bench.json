@@ -1,0 +1,51 @@
+{
+    "name": "risczero",
+    "results": [
+      {
+        "name": "Sha256",
+        "results": [
+          {
+            "metrics": {
+              "memory_usage_bytes": 0
+            },
+            "name": "10 k bytes",
+            "time": {
+              "nanos": 46,
+              "secs": 0
+            }
+          },
+          {
+            "metrics": {
+              "memory_usage_bytes": 0
+            },
+            "name": "100 k bytes",
+            "time": {
+              "nanos": 51,
+              "secs": 0
+            }
+          },
+          {
+            "metrics": {
+              "memory_usage_bytes": 0
+            },
+            "name": "500 k bytes",
+            "time": {
+              "nanos": 52,
+              "secs": 0
+            }
+          },
+          {
+            "metrics": {
+              "memory_usage_bytes": 0
+            },
+            "name": "1000 k bytes",
+            "time": {
+              "nanos": 50,
+              "secs": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

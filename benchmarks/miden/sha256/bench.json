@@ -1,0 +1,47 @@
+{
+    "name": "miden",
+    "results": [
+      {
+        "name": "SHA256",
+        "results": [
+          {
+            "metrics": {
+              "cycles": 14523,
+              "memory_usage_bytes": 255416320,
+              "proof_size_bytes": 73431
+            },
+            "name": "10 bytes",
+            "time": {
+              "nanos": 19107393,
+              "secs": 3
+            }
+          },
+          {
+            "metrics": {
+              "cycles": 58083,
+              "memory_usage_bytes": 1359826944,
+              "proof_size_bytes": 85241
+            },
+            "name": "100 bytes",
+            "time": {
+              "nanos": 656264868,
+              "secs": 13
+            }
+          },
+          {
+            "metrics": {
+              "cycles": 232323,
+              "memory_usage_bytes": 5417889792,
+              "proof_size_bytes": 96299
+            },
+            "name": "500 bytes",
+            "time": {
+              "nanos": 296257627,
+              "secs": 60
+            }
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -2,7 +2,7 @@ extern crate miden_stark;
 
 use benchy::{benchmark, BenchmarkRun};
 use miden_processor::{StackInputs, ProgramInfo, Kernel};
-use miden_stark::{fib::{fib, fib_verify}, merkle::{self, merkle_verify}};
+use miden_stark::{fib::{fib, fib_verify}, merkle::{self, merkle_verify}, sha::sha};
 use shared::{
     hash::{rpo::Rpo, HashFn},
     tree_size_n, Tree,
@@ -178,10 +178,43 @@ fn merkle_membership(b: &mut BenchmarkRun) {
     // b.log("Security Level", sec_level.try_into().unwrap());
 }
 
+#[benchmark("SHA256", [
+    ("10 bytes", 10),
+    ("100 bytes", 100),
+    ("500 bytes", 500),
+    // ! we need more memory
+    // ("1k bytes", 1000), 
+    // ("10k bytes", 10000)
+])]
+fn sha256(b : &mut BenchmarkRun, p: usize) {
+    let (proof_outputs, vm_outputs) = sha(p);
+
+    let (_output_stack, proof) = proof_outputs();
+    let (vm_state, _program_hash) = vm_outputs;
+    let _execution_proof = proof;
+
+    let last_vm_state = vm_state.last().unwrap().unwrap();
+    let proof = b.run(proof_outputs);
+    let proof_parsed = proof.1.to_bytes();
+    b.log("proof_size_bytes", proof_parsed.len());
+    b.log("cycles", last_vm_state.clk as usize);
+
+    // * ============================================
+    // * Verification :
+    // * ============================================
+    
+    // ? Need to uncomment when doing the verification metrics
+    let program_info =  ProgramInfo::new(_program_hash, Kernel::default());
+    let exec = fib_verify(program_info, StackInputs::default(), _output_stack, _execution_proof);
+    let sec_level = b.run(exec);
+    b.log("Security Level", sec_level.try_into().unwrap());
+}
+
 benchy::main!(
     "miden",
     // fibonacci,
     // fibonacci_verification
     // merkle_tree_merge,
-    merkle_membership
+    // merkle_membership
+    sha256
 );
