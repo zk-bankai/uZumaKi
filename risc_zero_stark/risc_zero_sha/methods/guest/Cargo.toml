@@ -1,0 +1,11 @@
+[package]
+name = "sha"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+nalgebra = "0.32.3"
+# If you want to try (experimental) std support, add `features = [ "std" ]` to risc0-zkvm
+risc0-zkvm = { version = "0.20.1", default-features = false }
