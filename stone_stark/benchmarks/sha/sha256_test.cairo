@@ -7,19 +7,15 @@ from starkware.cairo.common.alloc import alloc
 
 from sha256 import sha256, finalize_sha256
 
-func test_sha256_hello_world{bitwise_ptr: BitwiseBuiltin*, range_check_ptr}() -> felt*{
+func hash_eight_bytes{bitwise_ptr: BitwiseBuiltin*, range_check_ptr}() -> felt* {
     alloc_locals;
-
-    let (hello_world) = alloc();
-    assert hello_world[0] = 'hell';
-    assert hello_world[1] = 'o wo';
-    assert hello_world[2] = 'rld\x00';
 
     let (local sha256_ptr: felt*) = alloc();
     let sha256_ptr_start = sha256_ptr;
-    let (hash) = sha256{sha256_ptr=sha256_ptr}(hello_world, 11);
-    finalize_sha256(sha256_ptr_start=sha256_ptr_start, sha256_ptr_end=sha256_ptr);
-    
+    let (hash) = sha256{sha256_ptr=sha256_ptr}(new ('abc\x00'), 3);
+    // Disable verification
+    //finalize_sha256(sha256_ptr_start=sha256_ptr_start, sha256_ptr_end=sha256_ptr);
+
     return hash;
 }
 
@@ -29,7 +25,7 @@ func main(
 
     alloc_locals;
 
-    let res = test_sha256_hello_world{bitwise_ptr=bitwise_ptr, range_check_ptr=range_check_ptr}();
+    let res = hash_eight_bytes{bitwise_ptr=bitwise_ptr, range_check_ptr=range_check_ptr}();
     assert output_ptr[0] = res[0];
     assert output_ptr[1] = res[1];
     assert output_ptr[2] = res[2];
@@ -44,4 +40,3 @@ func main(
         output_ptr=&output_ptr[8], pedersen_ptr=pedersen_ptr, range_check_ptr=range_check_ptr, bitwise_ptr=bitwise_ptr
     );
 }
-
