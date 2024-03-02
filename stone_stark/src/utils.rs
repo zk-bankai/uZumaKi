@@ -75,7 +75,7 @@ mod test {
             Path::new("./benchmarks/sha/cpu_air_prover_config.json"),
             Path::new("./benchmarks/sha/cpu_air_params.json"),
             Path::new("./benchmarks/sha/sha256_test_proof.json"),
-            Path::new("../benchmarks/stone/sha256/sha256_bench_prover.json"),
+            Path::new("../benchmarks/stone/sha256/prover.json"),
             1
         )
         .unwrap();
@@ -85,7 +85,7 @@ mod test {
 
         run_verifier_from_command_line(
             Path::new("./benchmarks/sha/sha256_test_proof.json"), 
-            Path::new("../benchmarks/stone/sha256/sha256_bench_verifier.json"),
+            Path::new("../benchmarks/stone/sha256/verifier.json"),
             1
         )
         .expect("Proof file is valid");
