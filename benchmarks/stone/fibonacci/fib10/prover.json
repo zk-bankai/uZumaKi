@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "command": "/root/Release/src/starkware/main/cpu/cpu_air_prover     --out_file=fibonacci_proof.json     --private_input_file=fibonacci_private_input.json     --public_input_file=fibonacci_public_input.json     --prover_config_file=cpu_air_prover_config.json     --parameter_file=fibonacci_cpu_air_params.json",
+      "mean": 1.31989714288,
+      "stddev": 0.1193617763902244,
+      "median": 1.31989714288,
+      "user": 7.08897906,
+      "system": 0.31911327999999994,
+      "min": 1.23549562138,
+      "max": 1.40429866438,
+      "times": [1.40429866438, 1.23549562138],
+      "exit_codes": [0, 0]
+    }
+  ]
+}

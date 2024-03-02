@@ -66,16 +66,15 @@ mod test {
     use rstest::rstest;
     use super::*;
 
-    /// Check that the Stone Prover command-line wrapper works.
     #[rstest]
-    fn sha256_test_run_prover_verifier_from_command_line() {
+    fn sha256_8bytes_test_run_prover_verifier_from_command_line() {
         run_prover_from_command_line(
-            Path::new("./benchmarks/sha/sha256_test_public_input.json"),
-            Path::new("./benchmarks/sha/sha256_test_private_input.json"),
-            Path::new("./benchmarks/sha/cpu_air_prover_config.json"),
-            Path::new("./benchmarks/sha/cpu_air_params.json"),
-            Path::new("./benchmarks/sha/sha256_test_proof.json"),
-            Path::new("../benchmarks/stone/sha256/prover.json"),
+            Path::new("./data/sha256/8bytes/public_input.json"),
+            Path::new("./data/sha256/8bytes/private_input.json"),
+            Path::new("./data/sha256/8bytes/cpu_air_prover_config.json"),
+            Path::new("./data/sha256/8bytes/cpu_air_params.json"),
+            Path::new("./data/sha256/8bytes/proof.json"),
+            Path::new("../data/stone/sha256/8bytes/prover.json"),
             1
         )
         .unwrap();
@@ -84,8 +83,32 @@ mod test {
         // assert_eq!(proof.proof_hex, prover_cli_test_case.proof.proof_hex);
 
         run_verifier_from_command_line(
-            Path::new("./benchmarks/sha/sha256_test_proof.json"), 
-            Path::new("../benchmarks/stone/sha256/verifier.json"),
+            Path::new("./data/sha256/8bytes/proof.json"), 
+            Path::new("../data/stone/sha256/8bytes/verifier.json"),
+            1
+        )
+        .expect("Proof file is valid");
+    }
+
+    #[rstest]
+    fn fibonacci_10_test_run_prover_verifier_from_command_line() {
+        run_prover_from_command_line(
+            Path::new("./data/fibonacci/fib10/public_input.json"),
+            Path::new("./data/fibonacci/fib10/private_input.json"),
+            Path::new("./data/fibonacci/fib10/cpu_air_prover_config.json"),
+            Path::new("./data/fibonacci/fib10/cpu_air_params.json"),
+            Path::new("./data/fibonacci/fib10/proof.json"),
+            Path::new("../data/stone/fibonacci/fib10/prover.json"),
+            1
+        )
+        .unwrap();
+
+        // let proof = read_proof_file(output_file.path());
+        // assert_eq!(proof.proof_hex, prover_cli_test_case.proof.proof_hex);
+
+        run_verifier_from_command_line(
+            Path::new("./data/fibonacci/fib10/proof.json"), 
+            Path::new("../data/stone/fibonacci/fib10/verifier.json"),
             1
         )
         .expect("Proof file is valid");
