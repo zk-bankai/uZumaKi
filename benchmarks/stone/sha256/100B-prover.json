@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "command": "cpu_air_prover --out_file=./data/sha256/100bytes/proof.json --private_input_file=./data/sha256/100bytes/private_input.json --public_input_file=./data/sha256/100bytes/public_input.json --prover_config_file=./data/sha256/100bytes/cpu_air_prover_config.json --parameter_file=./data/sha256/100bytes/cpu_air_params.json",
+      "mean": 64.00931811226,
+      "stddev": null,
+      "median": 64.00931811226,
+      "user": 139.11019864,
+      "system": 4.5471961,
+      "min": 64.00931811226,
+      "max": 64.00931811226,
+      "times": [
+        64.00931811226
+      ],
+      "exit_codes": [
+        0
+      ]
+    }
+  ]
+}
