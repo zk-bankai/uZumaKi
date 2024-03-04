@@ -1,6 +1,6 @@
 {
-    "trace_path": "/root/development/uZumaKi/stone_stark/benchmarks/sha-cairo/working-dir/fibonacci_trace.json",
-    "memory_path": "/root/development/uZumaKi/stone_stark/benchmarks/sha-cairo/working-dir/fibonacci_memory.json",
+    "trace_path": "/root/development/uZumaKi/stone_stark/data/fibonacci/fib10/trace.json",
+    "memory_path": "/root/development/uZumaKi/stone_stark/data/fibonacci/fib10/memory.json",
     "pedersen": [],
     "range_check": [],
     "ecdsa": []

@@ -10,23 +10,23 @@
         },
         "execution": {
             "begin_addr": 37,
-            "stop_ptr": 98
+            "stop_ptr": 53
         },
         "output": {
-            "begin_addr": 98,
-            "stop_ptr": 100
+            "begin_addr": 53,
+            "stop_ptr": 55
         },
         "pedersen": {
-            "begin_addr": 100,
-            "stop_ptr": 100
+            "begin_addr": 55,
+            "stop_ptr": 55
         },
         "range_check": {
-            "begin_addr": 292,
-            "stop_ptr": 292
+            "begin_addr": 247,
+            "stop_ptr": 247
         },
         "ecdsa": {
-            "begin_addr": 356,
-            "stop_ptr": 356
+            "begin_addr": 311,
+            "stop_ptr": 311
         }
     },
     "public_memory": [
@@ -77,7 +77,7 @@
         },
         {
             "address": 10,
-            "value": "0xa",
+            "value": "0x1",
             "page": 0
         },
         {
@@ -112,7 +112,7 @@
         },
         {
             "address": 17,
-            "value": "0xa",
+            "value": "0x1",
             "page": 0
         },
         {
@@ -212,22 +212,22 @@
         },
         {
             "address": 37,
-            "value": "0x62",
+            "value": "0x35",
             "page": 0
         },
         {
-            "address": 97,
-            "value": "0x64",
+            "address": 52,
+            "value": "0x37",
             "page": 0
         },
         {
-            "address": 98,
-            "value": "0xa",
+            "address": 53,
+            "value": "0x1",
             "page": 0
         },
         {
-            "address": 99,
-            "value": "0x90",
+            "address": 54,
+            "value": "0x2",
             "page": 0
         }
     ],
