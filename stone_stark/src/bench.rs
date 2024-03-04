@@ -106,6 +106,11 @@ mod test {
     }
 
     #[rstest]
+    fn sha256_1000bytes_test() -> Result<(), Box<dyn std::error::Error>> {
+        run_test_case("sha256", "1000bytes", "sha256/1000B-prover.json", "sha256/1000B-verifier.json")
+    }
+
+    #[rstest]
     fn fibonacci_1_test() -> Result<(), Box<dyn std::error::Error>> {
         run_test_case("fibonacci", "fib1", "fibonacci/fib1-prover.json", "fibonacci/fib1-verifier.json")
     }
