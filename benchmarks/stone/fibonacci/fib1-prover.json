@@ -1,0 +1,16 @@
+{
+  "results": [
+    {
+      "command": "cpu_air_prover     --out_file=fibonacci_proof.json     --private_input_file=fibonacci_private_input.json     --public_input_file=fibonacci_public_input.json     --prover_config_file=cpu_air_prover_config.json     --parameter_file=cpu_air_params.json",
+      "mean": 1.40671736178,
+      "stddev": 0.03088378457261418,
+      "median": 1.40671736178,
+      "user": 7.7518185200000005,
+      "system": 0.51672856,
+      "min": 1.38487922828,
+      "max": 1.42855549528,
+      "times": [1.42855549528, 1.38487922828],
+      "exit_codes": [0, 0]
+    }
+  ]
+}
