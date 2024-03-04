@@ -1,0 +1,4 @@
+Log file created at: 2024/02/28 10:57:10
+Running on machine: AniketPrajapati-75.121.stradsolutions.com
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0228 10:57:10.500610 317997 profiling.cc:58] Prover started

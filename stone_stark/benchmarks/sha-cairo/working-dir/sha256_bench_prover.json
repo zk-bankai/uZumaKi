@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "command": "cpu_air_prover --out_file=/root/development/uZumaKi/stone_stark/benchmarks/sha-cairo/working-dir/sha256_test_proof.json --private_input_file=/root/development/uZumaKi/stone_stark/benchmarks/sha-cairo/working-dir/sha256_test_private_input.json --public_input_file=/root/development/uZumaKi/stone_stark/benchmarks/sha-cairo/working-dir/sha256_test_public_input.json --prover_config_file=/root/development/uZumaKi/stone_stark/benchmarks/sha-cairo/working-dir/cpu_air_prover_config.json --parameter_file=/root/development/uZumaKi/stone_stark/benchmarks/sha-cairo/working-dir/cpu_air_params.json",
+      "mean": 53.56784017068,
+      "stddev": null,
+      "median": 53.56784017068,
+      "user": 338.43850045999994,
+      "system": 11.148404739999998,
+      "min": 53.56784017068,
+      "max": 53.56784017068,
+      "times": [
+        53.56784017068
+      ],
+      "exit_codes": [
+        0
+      ]
+    }
+  ]
+}

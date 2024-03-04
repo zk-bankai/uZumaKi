@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "command": "/root/Release/src/starkware/main/cpu/cpu_air_prover \\\n    --out_file=sha256_test_proof.json \\\n    --private_input_file=sha256_test_private_input.json \\\n    --public_input_file=sha256_test_public_input.json \\\n    --prover_config_file=cpu_air_prover_config.json \\\n    --parameter_file=cpu_air_params.json",
+      "mean": 52.49841687206001,
+      "stddev": 1.180882872172363,
+      "median": 52.865618780060004,
+      "user": 339.797455,
+      "system": 8.86620022,
+      "min": 50.54226245406,
+      "max": 54.40535422506,
+      "times": [
+        53.47693966306,
+        51.52383155906,
+        53.14047298506,
+        53.15889396406,
+        52.94890638306,
+        54.40535422506,
+        51.32269677206,
+        51.68247953806,
+        52.78233117706,
+        50.54226245406
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

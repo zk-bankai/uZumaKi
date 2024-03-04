@@ -1,0 +1,16 @@
+Log file created at: 2024/02/28 10:36:57
+Running on machine: AniketPrajapati-75.121.stradsolutions.com
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0228 10:36:57.682199 315807 profiling.cc:58] Prover started
+I0228 10:36:57.707981 315807 memory_cell.inl:121] Filled 766 vacant slots in memory: 0 holes and 766 spares.
+I0228 10:36:58.037101 315807 stark.cc:423] Trace cells count:
+Log number of rows: 13
+Number of first trace columns: 23
+Number of interaction columns: 2
+Total trace cells: 204800
+I0228 10:37:02.434720 315807 prover_main_helper_impl.cc:147] Byte count: 63016
+Hash count: 843
+Commitment count: 5
+Field element count: 1126
+Data count: 1
+I0228 10:37:02.438278 315807 profiling.cc:85] Prover finished in 4.75606 sec
