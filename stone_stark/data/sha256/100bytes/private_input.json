@@ -1,0 +1,188 @@
+{
+    "trace_path": "/root/development/uZumaKi/stone_stark/data/sha256/100bytes/trace.json",
+    "memory_path": "/root/development/uZumaKi/stone_stark/data/sha256/100bytes/memory.json",
+    "pedersen": [],
+    "range_check": [
+        {
+            "index": 0,
+            "value": "0x0"
+        },
+        {
+            "index": 1,
+            "value": "0x0"
+        },
+        {
+            "index": 2,
+            "value": "0x64"
+        },
+        {
+            "index": 3,
+            "value": "0x0"
+        },
+        {
+            "index": 4,
+            "value": "0x0"
+        },
+        {
+            "index": 5,
+            "value": "0x0"
+        },
+        {
+            "index": 6,
+            "value": "0x64"
+        },
+        {
+            "index": 7,
+            "value": "0x0"
+        },
+        {
+            "index": 8,
+            "value": "0x24"
+        },
+        {
+            "index": 9,
+            "value": "0x1"
+        },
+        {
+            "index": 10,
+            "value": "0x1b"
+        },
+        {
+            "index": 11,
+            "value": "0x0"
+        },
+        {
+            "index": 12,
+            "value": "0x0"
+        },
+        {
+            "index": 13,
+            "value": "0x24"
+        },
+        {
+            "index": 14,
+            "value": "0x0"
+        },
+        {
+            "index": 15,
+            "value": "0x2d"
+        },
+        {
+            "index": 16,
+            "value": "0x0"
+        },
+        {
+            "index": 17,
+            "value": "0x37"
+        },
+        {
+            "index": 18,
+            "value": "0x0"
+        },
+        {
+            "index": 19,
+            "value": "0x24"
+        },
+        {
+            "index": 20,
+            "value": "0x1"
+        },
+        {
+            "index": 21,
+            "value": "0x1b"
+        },
+        {
+            "index": 22,
+            "value": "0x0"
+        },
+        {
+            "index": 23,
+            "value": "0x0"
+        },
+        {
+            "index": 24,
+            "value": "0x1"
+        },
+        {
+            "index": 25,
+            "value": "0x0"
+        },
+        {
+            "index": 26,
+            "value": "0x0"
+        },
+        {
+            "index": 27,
+            "value": "0x0"
+        },
+        {
+            "index": 28,
+            "value": "0x24"
+        },
+        {
+            "index": 29,
+            "value": "0x0"
+        },
+        {
+            "index": 30,
+            "value": "0x0"
+        },
+        {
+            "index": 31,
+            "value": "0x0"
+        },
+        {
+            "index": 32,
+            "value": "0x64"
+        },
+        {
+            "index": 33,
+            "value": "0x0"
+        },
+        {
+            "index": 34,
+            "value": "0x24"
+        },
+        {
+            "index": 35,
+            "value": "0x1"
+        },
+        {
+            "index": 36,
+            "value": "0x1b"
+        },
+        {
+            "index": 37,
+            "value": "0x0"
+        },
+        {
+            "index": 38,
+            "value": "0x0"
+        },
+        {
+            "index": 39,
+            "value": "0x24"
+        },
+        {
+            "index": 40,
+            "value": "0x0"
+        },
+        {
+            "index": 41,
+            "value": "0x13"
+        },
+        {
+            "index": 42,
+            "value": "0x0"
+        },
+        {
+            "index": 43,
+            "value": "0x24"
+        },
+        {
+            "index": 44,
+            "value": "0x0"
+        }
+    ],
+    "bitwise": []
+}

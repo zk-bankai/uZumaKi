@@ -1,0 +1,1644 @@
+{
+    "trace_path": "/root/development/uZumaKi/stone_stark/data/sha256/1000bytes/trace.json",
+    "memory_path": "/root/development/uZumaKi/stone_stark/data/sha256/1000bytes/memory.json",
+    "pedersen": [],
+    "range_check": [
+        {
+            "index": 0,
+            "value": "0x0"
+        },
+        {
+            "index": 1,
+            "value": "0x0"
+        },
+        {
+            "index": 2,
+            "value": "0x3e8"
+        },
+        {
+            "index": 3,
+            "value": "0x0"
+        },
+        {
+            "index": 4,
+            "value": "0x0"
+        },
+        {
+            "index": 5,
+            "value": "0x0"
+        },
+        {
+            "index": 6,
+            "value": "0x3e8"
+        },
+        {
+            "index": 7,
+            "value": "0x0"
+        },
+        {
+            "index": 8,
+            "value": "0x28"
+        },
+        {
+            "index": 9,
+            "value": "0xf"
+        },
+        {
+            "index": 10,
+            "value": "0x17"
+        },
+        {
+            "index": 11,
+            "value": "0x0"
+        },
+        {
+            "index": 12,
+            "value": "0x0"
+        },
+        {
+            "index": 13,
+            "value": "0x28"
+        },
+        {
+            "index": 14,
+            "value": "0x0"
+        },
+        {
+            "index": 15,
+            "value": "0x37"
+        },
+        {
+            "index": 16,
+            "value": "0x0"
+        },
+        {
+            "index": 17,
+            "value": "0x3b1"
+        },
+        {
+            "index": 18,
+            "value": "0x0"
+        },
+        {
+            "index": 19,
+            "value": "0x28"
+        },
+        {
+            "index": 20,
+            "value": "0xf"
+        },
+        {
+            "index": 21,
+            "value": "0x17"
+        },
+        {
+            "index": 22,
+            "value": "0x0"
+        },
+        {
+            "index": 23,
+            "value": "0x0"
+        },
+        {
+            "index": 24,
+            "value": "0xf"
+        },
+        {
+            "index": 25,
+            "value": "0x0"
+        },
+        {
+            "index": 26,
+            "value": "0x0"
+        },
+        {
+            "index": 27,
+            "value": "0x0"
+        },
+        {
+            "index": 28,
+            "value": "0x3a8"
+        },
+        {
+            "index": 29,
+            "value": "0x0"
+        },
+        {
+            "index": 30,
+            "value": "0x0"
+        },
+        {
+            "index": 31,
+            "value": "0x0"
+        },
+        {
+            "index": 32,
+            "value": "0x3e8"
+        },
+        {
+            "index": 33,
+            "value": "0x0"
+        },
+        {
+            "index": 34,
+            "value": "0x28"
+        },
+        {
+            "index": 35,
+            "value": "0xf"
+        },
+        {
+            "index": 36,
+            "value": "0x17"
+        },
+        {
+            "index": 37,
+            "value": "0x0"
+        },
+        {
+            "index": 38,
+            "value": "0x0"
+        },
+        {
+            "index": 39,
+            "value": "0x28"
+        },
+        {
+            "index": 40,
+            "value": "0x0"
+        },
+        {
+            "index": 41,
+            "value": "0x37"
+        },
+        {
+            "index": 42,
+            "value": "0x0"
+        },
+        {
+            "index": 43,
+            "value": "0x371"
+        },
+        {
+            "index": 44,
+            "value": "0x0"
+        },
+        {
+            "index": 45,
+            "value": "0x28"
+        },
+        {
+            "index": 46,
+            "value": "0xe"
+        },
+        {
+            "index": 47,
+            "value": "0x17"
+        },
+        {
+            "index": 48,
+            "value": "0x0"
+        },
+        {
+            "index": 49,
+            "value": "0x0"
+        },
+        {
+            "index": 50,
+            "value": "0xe"
+        },
+        {
+            "index": 51,
+            "value": "0x0"
+        },
+        {
+            "index": 52,
+            "value": "0x0"
+        },
+        {
+            "index": 53,
+            "value": "0x0"
+        },
+        {
+            "index": 54,
+            "value": "0x368"
+        },
+        {
+            "index": 55,
+            "value": "0x0"
+        },
+        {
+            "index": 56,
+            "value": "0x0"
+        },
+        {
+            "index": 57,
+            "value": "0x0"
+        },
+        {
+            "index": 58,
+            "value": "0x3e8"
+        },
+        {
+            "index": 59,
+            "value": "0x0"
+        },
+        {
+            "index": 60,
+            "value": "0x28"
+        },
+        {
+            "index": 61,
+            "value": "0xf"
+        },
+        {
+            "index": 62,
+            "value": "0x17"
+        },
+        {
+            "index": 63,
+            "value": "0x0"
+        },
+        {
+            "index": 64,
+            "value": "0x0"
+        },
+        {
+            "index": 65,
+            "value": "0x28"
+        },
+        {
+            "index": 66,
+            "value": "0x0"
+        },
+        {
+            "index": 67,
+            "value": "0x37"
+        },
+        {
+            "index": 68,
+            "value": "0x0"
+        },
+        {
+            "index": 69,
+            "value": "0x331"
+        },
+        {
+            "index": 70,
+            "value": "0x0"
+        },
+        {
+            "index": 71,
+            "value": "0x28"
+        },
+        {
+            "index": 72,
+            "value": "0xd"
+        },
+        {
+            "index": 73,
+            "value": "0x17"
+        },
+        {
+            "index": 74,
+            "value": "0x0"
+        },
+        {
+            "index": 75,
+            "value": "0x0"
+        },
+        {
+            "index": 76,
+            "value": "0xd"
+        },
+        {
+            "index": 77,
+            "value": "0x0"
+        },
+        {
+            "index": 78,
+            "value": "0x0"
+        },
+        {
+            "index": 79,
+            "value": "0x0"
+        },
+        {
+            "index": 80,
+            "value": "0x328"
+        },
+        {
+            "index": 81,
+            "value": "0x0"
+        },
+        {
+            "index": 82,
+            "value": "0x0"
+        },
+        {
+            "index": 83,
+            "value": "0x0"
+        },
+        {
+            "index": 84,
+            "value": "0x3e8"
+        },
+        {
+            "index": 85,
+            "value": "0x0"
+        },
+        {
+            "index": 86,
+            "value": "0x28"
+        },
+        {
+            "index": 87,
+            "value": "0xf"
+        },
+        {
+            "index": 88,
+            "value": "0x17"
+        },
+        {
+            "index": 89,
+            "value": "0x0"
+        },
+        {
+            "index": 90,
+            "value": "0x0"
+        },
+        {
+            "index": 91,
+            "value": "0x28"
+        },
+        {
+            "index": 92,
+            "value": "0x0"
+        },
+        {
+            "index": 93,
+            "value": "0x37"
+        },
+        {
+            "index": 94,
+            "value": "0x0"
+        },
+        {
+            "index": 95,
+            "value": "0x2f1"
+        },
+        {
+            "index": 96,
+            "value": "0x0"
+        },
+        {
+            "index": 97,
+            "value": "0x28"
+        },
+        {
+            "index": 98,
+            "value": "0xc"
+        },
+        {
+            "index": 99,
+            "value": "0x17"
+        },
+        {
+            "index": 100,
+            "value": "0x0"
+        },
+        {
+            "index": 101,
+            "value": "0x0"
+        },
+        {
+            "index": 102,
+            "value": "0xc"
+        },
+        {
+            "index": 103,
+            "value": "0x0"
+        },
+        {
+            "index": 104,
+            "value": "0x0"
+        },
+        {
+            "index": 105,
+            "value": "0x0"
+        },
+        {
+            "index": 106,
+            "value": "0x2e8"
+        },
+        {
+            "index": 107,
+            "value": "0x0"
+        },
+        {
+            "index": 108,
+            "value": "0x0"
+        },
+        {
+            "index": 109,
+            "value": "0x0"
+        },
+        {
+            "index": 110,
+            "value": "0x3e8"
+        },
+        {
+            "index": 111,
+            "value": "0x0"
+        },
+        {
+            "index": 112,
+            "value": "0x28"
+        },
+        {
+            "index": 113,
+            "value": "0xf"
+        },
+        {
+            "index": 114,
+            "value": "0x17"
+        },
+        {
+            "index": 115,
+            "value": "0x0"
+        },
+        {
+            "index": 116,
+            "value": "0x0"
+        },
+        {
+            "index": 117,
+            "value": "0x28"
+        },
+        {
+            "index": 118,
+            "value": "0x0"
+        },
+        {
+            "index": 119,
+            "value": "0x37"
+        },
+        {
+            "index": 120,
+            "value": "0x0"
+        },
+        {
+            "index": 121,
+            "value": "0x2b1"
+        },
+        {
+            "index": 122,
+            "value": "0x0"
+        },
+        {
+            "index": 123,
+            "value": "0x28"
+        },
+        {
+            "index": 124,
+            "value": "0xb"
+        },
+        {
+            "index": 125,
+            "value": "0x17"
+        },
+        {
+            "index": 126,
+            "value": "0x0"
+        },
+        {
+            "index": 127,
+            "value": "0x0"
+        },
+        {
+            "index": 128,
+            "value": "0xb"
+        },
+        {
+            "index": 129,
+            "value": "0x0"
+        },
+        {
+            "index": 130,
+            "value": "0x0"
+        },
+        {
+            "index": 131,
+            "value": "0x0"
+        },
+        {
+            "index": 132,
+            "value": "0x2a8"
+        },
+        {
+            "index": 133,
+            "value": "0x0"
+        },
+        {
+            "index": 134,
+            "value": "0x0"
+        },
+        {
+            "index": 135,
+            "value": "0x0"
+        },
+        {
+            "index": 136,
+            "value": "0x3e8"
+        },
+        {
+            "index": 137,
+            "value": "0x0"
+        },
+        {
+            "index": 138,
+            "value": "0x28"
+        },
+        {
+            "index": 139,
+            "value": "0xf"
+        },
+        {
+            "index": 140,
+            "value": "0x17"
+        },
+        {
+            "index": 141,
+            "value": "0x0"
+        },
+        {
+            "index": 142,
+            "value": "0x0"
+        },
+        {
+            "index": 143,
+            "value": "0x28"
+        },
+        {
+            "index": 144,
+            "value": "0x0"
+        },
+        {
+            "index": 145,
+            "value": "0x37"
+        },
+        {
+            "index": 146,
+            "value": "0x0"
+        },
+        {
+            "index": 147,
+            "value": "0x271"
+        },
+        {
+            "index": 148,
+            "value": "0x0"
+        },
+        {
+            "index": 149,
+            "value": "0x28"
+        },
+        {
+            "index": 150,
+            "value": "0xa"
+        },
+        {
+            "index": 151,
+            "value": "0x17"
+        },
+        {
+            "index": 152,
+            "value": "0x0"
+        },
+        {
+            "index": 153,
+            "value": "0x0"
+        },
+        {
+            "index": 154,
+            "value": "0xa"
+        },
+        {
+            "index": 155,
+            "value": "0x0"
+        },
+        {
+            "index": 156,
+            "value": "0x0"
+        },
+        {
+            "index": 157,
+            "value": "0x0"
+        },
+        {
+            "index": 158,
+            "value": "0x268"
+        },
+        {
+            "index": 159,
+            "value": "0x0"
+        },
+        {
+            "index": 160,
+            "value": "0x0"
+        },
+        {
+            "index": 161,
+            "value": "0x0"
+        },
+        {
+            "index": 162,
+            "value": "0x3e8"
+        },
+        {
+            "index": 163,
+            "value": "0x0"
+        },
+        {
+            "index": 164,
+            "value": "0x28"
+        },
+        {
+            "index": 165,
+            "value": "0xf"
+        },
+        {
+            "index": 166,
+            "value": "0x17"
+        },
+        {
+            "index": 167,
+            "value": "0x0"
+        },
+        {
+            "index": 168,
+            "value": "0x0"
+        },
+        {
+            "index": 169,
+            "value": "0x28"
+        },
+        {
+            "index": 170,
+            "value": "0x0"
+        },
+        {
+            "index": 171,
+            "value": "0x37"
+        },
+        {
+            "index": 172,
+            "value": "0x0"
+        },
+        {
+            "index": 173,
+            "value": "0x231"
+        },
+        {
+            "index": 174,
+            "value": "0x0"
+        },
+        {
+            "index": 175,
+            "value": "0x28"
+        },
+        {
+            "index": 176,
+            "value": "0x9"
+        },
+        {
+            "index": 177,
+            "value": "0x17"
+        },
+        {
+            "index": 178,
+            "value": "0x0"
+        },
+        {
+            "index": 179,
+            "value": "0x0"
+        },
+        {
+            "index": 180,
+            "value": "0x9"
+        },
+        {
+            "index": 181,
+            "value": "0x0"
+        },
+        {
+            "index": 182,
+            "value": "0x0"
+        },
+        {
+            "index": 183,
+            "value": "0x0"
+        },
+        {
+            "index": 184,
+            "value": "0x228"
+        },
+        {
+            "index": 185,
+            "value": "0x0"
+        },
+        {
+            "index": 186,
+            "value": "0x0"
+        },
+        {
+            "index": 187,
+            "value": "0x0"
+        },
+        {
+            "index": 188,
+            "value": "0x3e8"
+        },
+        {
+            "index": 189,
+            "value": "0x0"
+        },
+        {
+            "index": 190,
+            "value": "0x28"
+        },
+        {
+            "index": 191,
+            "value": "0xf"
+        },
+        {
+            "index": 192,
+            "value": "0x17"
+        },
+        {
+            "index": 193,
+            "value": "0x0"
+        },
+        {
+            "index": 194,
+            "value": "0x0"
+        },
+        {
+            "index": 195,
+            "value": "0x28"
+        },
+        {
+            "index": 196,
+            "value": "0x0"
+        },
+        {
+            "index": 197,
+            "value": "0x37"
+        },
+        {
+            "index": 198,
+            "value": "0x0"
+        },
+        {
+            "index": 199,
+            "value": "0x1f1"
+        },
+        {
+            "index": 200,
+            "value": "0x0"
+        },
+        {
+            "index": 201,
+            "value": "0x28"
+        },
+        {
+            "index": 202,
+            "value": "0x8"
+        },
+        {
+            "index": 203,
+            "value": "0x17"
+        },
+        {
+            "index": 204,
+            "value": "0x0"
+        },
+        {
+            "index": 205,
+            "value": "0x0"
+        },
+        {
+            "index": 206,
+            "value": "0x8"
+        },
+        {
+            "index": 207,
+            "value": "0x0"
+        },
+        {
+            "index": 208,
+            "value": "0x0"
+        },
+        {
+            "index": 209,
+            "value": "0x0"
+        },
+        {
+            "index": 210,
+            "value": "0x1e8"
+        },
+        {
+            "index": 211,
+            "value": "0x0"
+        },
+        {
+            "index": 212,
+            "value": "0x0"
+        },
+        {
+            "index": 213,
+            "value": "0x0"
+        },
+        {
+            "index": 214,
+            "value": "0x3e8"
+        },
+        {
+            "index": 215,
+            "value": "0x0"
+        },
+        {
+            "index": 216,
+            "value": "0x28"
+        },
+        {
+            "index": 217,
+            "value": "0xf"
+        },
+        {
+            "index": 218,
+            "value": "0x17"
+        },
+        {
+            "index": 219,
+            "value": "0x0"
+        },
+        {
+            "index": 220,
+            "value": "0x0"
+        },
+        {
+            "index": 221,
+            "value": "0x28"
+        },
+        {
+            "index": 222,
+            "value": "0x0"
+        },
+        {
+            "index": 223,
+            "value": "0x37"
+        },
+        {
+            "index": 224,
+            "value": "0x0"
+        },
+        {
+            "index": 225,
+            "value": "0x1b1"
+        },
+        {
+            "index": 226,
+            "value": "0x0"
+        },
+        {
+            "index": 227,
+            "value": "0x28"
+        },
+        {
+            "index": 228,
+            "value": "0x7"
+        },
+        {
+            "index": 229,
+            "value": "0x17"
+        },
+        {
+            "index": 230,
+            "value": "0x0"
+        },
+        {
+            "index": 231,
+            "value": "0x0"
+        },
+        {
+            "index": 232,
+            "value": "0x7"
+        },
+        {
+            "index": 233,
+            "value": "0x0"
+        },
+        {
+            "index": 234,
+            "value": "0x0"
+        },
+        {
+            "index": 235,
+            "value": "0x0"
+        },
+        {
+            "index": 236,
+            "value": "0x1a8"
+        },
+        {
+            "index": 237,
+            "value": "0x0"
+        },
+        {
+            "index": 238,
+            "value": "0x0"
+        },
+        {
+            "index": 239,
+            "value": "0x0"
+        },
+        {
+            "index": 240,
+            "value": "0x3e8"
+        },
+        {
+            "index": 241,
+            "value": "0x0"
+        },
+        {
+            "index": 242,
+            "value": "0x28"
+        },
+        {
+            "index": 243,
+            "value": "0xf"
+        },
+        {
+            "index": 244,
+            "value": "0x17"
+        },
+        {
+            "index": 245,
+            "value": "0x0"
+        },
+        {
+            "index": 246,
+            "value": "0x0"
+        },
+        {
+            "index": 247,
+            "value": "0x28"
+        },
+        {
+            "index": 248,
+            "value": "0x0"
+        },
+        {
+            "index": 249,
+            "value": "0x37"
+        },
+        {
+            "index": 250,
+            "value": "0x0"
+        },
+        {
+            "index": 251,
+            "value": "0x171"
+        },
+        {
+            "index": 252,
+            "value": "0x0"
+        },
+        {
+            "index": 253,
+            "value": "0x28"
+        },
+        {
+            "index": 254,
+            "value": "0x6"
+        },
+        {
+            "index": 255,
+            "value": "0x17"
+        },
+        {
+            "index": 256,
+            "value": "0x0"
+        },
+        {
+            "index": 257,
+            "value": "0x0"
+        },
+        {
+            "index": 258,
+            "value": "0x6"
+        },
+        {
+            "index": 259,
+            "value": "0x0"
+        },
+        {
+            "index": 260,
+            "value": "0x0"
+        },
+        {
+            "index": 261,
+            "value": "0x0"
+        },
+        {
+            "index": 262,
+            "value": "0x168"
+        },
+        {
+            "index": 263,
+            "value": "0x0"
+        },
+        {
+            "index": 264,
+            "value": "0x0"
+        },
+        {
+            "index": 265,
+            "value": "0x0"
+        },
+        {
+            "index": 266,
+            "value": "0x3e8"
+        },
+        {
+            "index": 267,
+            "value": "0x0"
+        },
+        {
+            "index": 268,
+            "value": "0x28"
+        },
+        {
+            "index": 269,
+            "value": "0xf"
+        },
+        {
+            "index": 270,
+            "value": "0x17"
+        },
+        {
+            "index": 271,
+            "value": "0x0"
+        },
+        {
+            "index": 272,
+            "value": "0x0"
+        },
+        {
+            "index": 273,
+            "value": "0x28"
+        },
+        {
+            "index": 274,
+            "value": "0x0"
+        },
+        {
+            "index": 275,
+            "value": "0x37"
+        },
+        {
+            "index": 276,
+            "value": "0x0"
+        },
+        {
+            "index": 277,
+            "value": "0x131"
+        },
+        {
+            "index": 278,
+            "value": "0x0"
+        },
+        {
+            "index": 279,
+            "value": "0x28"
+        },
+        {
+            "index": 280,
+            "value": "0x5"
+        },
+        {
+            "index": 281,
+            "value": "0x17"
+        },
+        {
+            "index": 282,
+            "value": "0x0"
+        },
+        {
+            "index": 283,
+            "value": "0x0"
+        },
+        {
+            "index": 284,
+            "value": "0x5"
+        },
+        {
+            "index": 285,
+            "value": "0x0"
+        },
+        {
+            "index": 286,
+            "value": "0x0"
+        },
+        {
+            "index": 287,
+            "value": "0x0"
+        },
+        {
+            "index": 288,
+            "value": "0x128"
+        },
+        {
+            "index": 289,
+            "value": "0x0"
+        },
+        {
+            "index": 290,
+            "value": "0x0"
+        },
+        {
+            "index": 291,
+            "value": "0x0"
+        },
+        {
+            "index": 292,
+            "value": "0x3e8"
+        },
+        {
+            "index": 293,
+            "value": "0x0"
+        },
+        {
+            "index": 294,
+            "value": "0x28"
+        },
+        {
+            "index": 295,
+            "value": "0xf"
+        },
+        {
+            "index": 296,
+            "value": "0x17"
+        },
+        {
+            "index": 297,
+            "value": "0x0"
+        },
+        {
+            "index": 298,
+            "value": "0x0"
+        },
+        {
+            "index": 299,
+            "value": "0x28"
+        },
+        {
+            "index": 300,
+            "value": "0x0"
+        },
+        {
+            "index": 301,
+            "value": "0x37"
+        },
+        {
+            "index": 302,
+            "value": "0x0"
+        },
+        {
+            "index": 303,
+            "value": "0xf1"
+        },
+        {
+            "index": 304,
+            "value": "0x0"
+        },
+        {
+            "index": 305,
+            "value": "0x28"
+        },
+        {
+            "index": 306,
+            "value": "0x4"
+        },
+        {
+            "index": 307,
+            "value": "0x17"
+        },
+        {
+            "index": 308,
+            "value": "0x0"
+        },
+        {
+            "index": 309,
+            "value": "0x0"
+        },
+        {
+            "index": 310,
+            "value": "0x4"
+        },
+        {
+            "index": 311,
+            "value": "0x0"
+        },
+        {
+            "index": 312,
+            "value": "0x0"
+        },
+        {
+            "index": 313,
+            "value": "0x0"
+        },
+        {
+            "index": 314,
+            "value": "0xe8"
+        },
+        {
+            "index": 315,
+            "value": "0x0"
+        },
+        {
+            "index": 316,
+            "value": "0x0"
+        },
+        {
+            "index": 317,
+            "value": "0x0"
+        },
+        {
+            "index": 318,
+            "value": "0x3e8"
+        },
+        {
+            "index": 319,
+            "value": "0x0"
+        },
+        {
+            "index": 320,
+            "value": "0x28"
+        },
+        {
+            "index": 321,
+            "value": "0xf"
+        },
+        {
+            "index": 322,
+            "value": "0x17"
+        },
+        {
+            "index": 323,
+            "value": "0x0"
+        },
+        {
+            "index": 324,
+            "value": "0x0"
+        },
+        {
+            "index": 325,
+            "value": "0x28"
+        },
+        {
+            "index": 326,
+            "value": "0x0"
+        },
+        {
+            "index": 327,
+            "value": "0x37"
+        },
+        {
+            "index": 328,
+            "value": "0x0"
+        },
+        {
+            "index": 329,
+            "value": "0xb1"
+        },
+        {
+            "index": 330,
+            "value": "0x0"
+        },
+        {
+            "index": 331,
+            "value": "0x28"
+        },
+        {
+            "index": 332,
+            "value": "0x3"
+        },
+        {
+            "index": 333,
+            "value": "0x17"
+        },
+        {
+            "index": 334,
+            "value": "0x0"
+        },
+        {
+            "index": 335,
+            "value": "0x0"
+        },
+        {
+            "index": 336,
+            "value": "0x3"
+        },
+        {
+            "index": 337,
+            "value": "0x0"
+        },
+        {
+            "index": 338,
+            "value": "0x0"
+        },
+        {
+            "index": 339,
+            "value": "0x0"
+        },
+        {
+            "index": 340,
+            "value": "0xa8"
+        },
+        {
+            "index": 341,
+            "value": "0x0"
+        },
+        {
+            "index": 342,
+            "value": "0x0"
+        },
+        {
+            "index": 343,
+            "value": "0x0"
+        },
+        {
+            "index": 344,
+            "value": "0x3e8"
+        },
+        {
+            "index": 345,
+            "value": "0x0"
+        },
+        {
+            "index": 346,
+            "value": "0x28"
+        },
+        {
+            "index": 347,
+            "value": "0xf"
+        },
+        {
+            "index": 348,
+            "value": "0x17"
+        },
+        {
+            "index": 349,
+            "value": "0x0"
+        },
+        {
+            "index": 350,
+            "value": "0x0"
+        },
+        {
+            "index": 351,
+            "value": "0x28"
+        },
+        {
+            "index": 352,
+            "value": "0x0"
+        },
+        {
+            "index": 353,
+            "value": "0x37"
+        },
+        {
+            "index": 354,
+            "value": "0x0"
+        },
+        {
+            "index": 355,
+            "value": "0x71"
+        },
+        {
+            "index": 356,
+            "value": "0x0"
+        },
+        {
+            "index": 357,
+            "value": "0x28"
+        },
+        {
+            "index": 358,
+            "value": "0x2"
+        },
+        {
+            "index": 359,
+            "value": "0x17"
+        },
+        {
+            "index": 360,
+            "value": "0x0"
+        },
+        {
+            "index": 361,
+            "value": "0x0"
+        },
+        {
+            "index": 362,
+            "value": "0x2"
+        },
+        {
+            "index": 363,
+            "value": "0x0"
+        },
+        {
+            "index": 364,
+            "value": "0x0"
+        },
+        {
+            "index": 365,
+            "value": "0x0"
+        },
+        {
+            "index": 366,
+            "value": "0x68"
+        },
+        {
+            "index": 367,
+            "value": "0x0"
+        },
+        {
+            "index": 368,
+            "value": "0x0"
+        },
+        {
+            "index": 369,
+            "value": "0x0"
+        },
+        {
+            "index": 370,
+            "value": "0x3e8"
+        },
+        {
+            "index": 371,
+            "value": "0x0"
+        },
+        {
+            "index": 372,
+            "value": "0x28"
+        },
+        {
+            "index": 373,
+            "value": "0xf"
+        },
+        {
+            "index": 374,
+            "value": "0x17"
+        },
+        {
+            "index": 375,
+            "value": "0x0"
+        },
+        {
+            "index": 376,
+            "value": "0x0"
+        },
+        {
+            "index": 377,
+            "value": "0x28"
+        },
+        {
+            "index": 378,
+            "value": "0x0"
+        },
+        {
+            "index": 379,
+            "value": "0x31"
+        },
+        {
+            "index": 380,
+            "value": "0x0"
+        },
+        {
+            "index": 381,
+            "value": "0x37"
+        },
+        {
+            "index": 382,
+            "value": "0x0"
+        },
+        {
+            "index": 383,
+            "value": "0x28"
+        },
+        {
+            "index": 384,
+            "value": "0x1"
+        },
+        {
+            "index": 385,
+            "value": "0x17"
+        },
+        {
+            "index": 386,
+            "value": "0x0"
+        },
+        {
+            "index": 387,
+            "value": "0x0"
+        },
+        {
+            "index": 388,
+            "value": "0x1"
+        },
+        {
+            "index": 389,
+            "value": "0x0"
+        },
+        {
+            "index": 390,
+            "value": "0x0"
+        },
+        {
+            "index": 391,
+            "value": "0x0"
+        },
+        {
+            "index": 392,
+            "value": "0x28"
+        },
+        {
+            "index": 393,
+            "value": "0x0"
+        },
+        {
+            "index": 394,
+            "value": "0x0"
+        },
+        {
+            "index": 395,
+            "value": "0x0"
+        },
+        {
+            "index": 396,
+            "value": "0x3e8"
+        },
+        {
+            "index": 397,
+            "value": "0x0"
+        },
+        {
+            "index": 398,
+            "value": "0x28"
+        },
+        {
+            "index": 399,
+            "value": "0xf"
+        },
+        {
+            "index": 400,
+            "value": "0x17"
+        },
+        {
+            "index": 401,
+            "value": "0x0"
+        },
+        {
+            "index": 402,
+            "value": "0x0"
+        },
+        {
+            "index": 403,
+            "value": "0x28"
+        },
+        {
+            "index": 404,
+            "value": "0x0"
+        },
+        {
+            "index": 405,
+            "value": "0xf"
+        },
+        {
+            "index": 406,
+            "value": "0x0"
+        },
+        {
+            "index": 407,
+            "value": "0x28"
+        },
+        {
+            "index": 408,
+            "value": "0x0"
+        }
+    ],
+    "bitwise": []
+}

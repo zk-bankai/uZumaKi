@@ -2,7 +2,7 @@
   "name": "miden",
   "results": [
     {
-      "name": "Fibonacci",
+      "name": "Fibonacci_Proof",
       "results": [
         {
           "metrics": {

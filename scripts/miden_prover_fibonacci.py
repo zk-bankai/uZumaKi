@@ -1,63 +1,75 @@
-import json
 import pandas as pd
 import matplotlib.pyplot as plt
+import json
 
-# Load the JSON data from the file
-file_path = "../benchmarks/miden/fibonacci/bench.json"  # Replace with the path to your JSON file
+file_path = "../benchmarks/miden/fibonacci/bench.json"
 
-with open(file_path, "r") as file:
-    data = json.load(file)
 
-# Extracting data for visualization
-results = data["results"][0][
-    "results"
-]  # Assuming we are focusing on the first entry in 'results'
+# Function to parse JSON data into a list of dictionaries for DataFrame creation
+def parse_json_file(file_path):
+    with open(file_path, "r") as file:
+        data = json.load(file)
+    
+    parsed_data = []
+    for category in data["results"]:
+        if category["name"] == "Fibonacci_Proof":  # Filter to only include Fibonacci_Proof
+            category_name = category["name"]
+            for result in category["results"]:
+                parsed_data.append({
+                    "Category": category_name,
+                    "Fibonacci": int(result["name"]),
+                    "Cycles": result["metrics"]["cycles"],
+                    "Memory Usage (bytes)": result["metrics"].get("memory_usage_bytes", 0),
+                    "Proof Size (bytes)": result["metrics"]["proof_size_bytes"],
+                    "Time (seconds)": result["time"]["secs"] + result["time"]["nanos"] / 1e9,
+                })
+    return parsed_data
 
-# Creating a DataFrame
-df = pd.DataFrame(
-    {
-        "Fibonacci": [int(r["name"]) for r in results],  # converting names to integers
-        "cycles": [r["metrics"]["cycles"] for r in results],
-        "memory_usage_bytes": [r["metrics"]["memory_usage_bytes"] for r in results],
-        "proof_size_bytes": [r["metrics"]["proof_size_bytes"] for r in results],
-        "time_seconds": [r["time"]["secs"] + r["time"]["nanos"] / 1e9 for r in results],
-    }
-)
+def plot_all_metrics_in_one(df, save_path):
+    fig, axs = plt.subplots(2, 2, figsize=(16, 10))  # Creating 2x2 subplots
 
-# Creating visualizations
-plt.figure(figsize=(16, 10))
+    # Subplot 1: Cycles vs Fibonacci
+    axs[0, 0].set_title('Cycles vs Fibonacci')
+    axs[0, 0].set_xlabel('Fibonacci')
+    axs[0, 0].set_xscale('log')
+    axs[0, 0].set_ylabel('Cycles')
 
-# Plotting 'cycles' vs 'Fibonacci'
-plt.subplot(2, 2, 1)
-plt.plot(df["Fibonacci"], df["cycles"], marker="o")
-plt.xlabel("Fibonacci")
-plt.ylabel("Cycles")
-plt.title("Cycles vs Fibonacci")
-plt.xscale("log")
+    # Subplot 2: Memory Usage vs Fibonacci
+    axs[0, 1].set_title('Memory Usage vs Fibonacci')
+    axs[0, 1].set_xscale('log')
+    axs[0, 1].set_xlabel('Fibonacci')
+    axs[0, 1].set_ylabel('Memory Usage (bytes)')
 
-# Plotting 'memory_usage_bytes' vs 'Fibonacci'
-plt.subplot(2, 2, 2)
-plt.plot(df["Fibonacci"], df["memory_usage_bytes"], marker="o", color="green")
-plt.xlabel("Fibonacci")
-plt.ylabel("Memory Usage (bytes)")
-plt.title("Memory Usage vs Fibonacci")
-plt.xscale("log")
+    # Subplot 3: Proof Size vs Fibonacci
+    axs[1, 0].set_title('Proof Size vs Fibonacci')
+    axs[1, 0].set_xscale('log')
+    axs[1, 0].set_xlabel('Fibonacci')
+    axs[1, 0].set_ylabel('Proof Size (bytes)')
 
-# Plotting 'proof_size_bytes' vs 'Fibonacci'
-plt.subplot(2, 2, 3)
-plt.plot(df["Fibonacci"], df["proof_size_bytes"], marker="o", color="red")
-plt.xlabel("Fibonacci")
-plt.ylabel("Proof Size (bytes)")
-plt.title("Proof Size vs Fibonacci")
-plt.xscale("log")
+    # Subplot 4: Time vs Fibonacci
+    axs[1, 1].set_title('Time vs Fibonacci')
+    axs[1, 1].set_xscale('log')
+    axs[1, 1].set_xlabel('Fibonacci')
+    axs[1, 1].set_ylabel('Time (seconds)')
 
-# Plotting 'time_seconds' vs 'Fibonacci'
-plt.subplot(2, 2, 4)
-plt.plot(df["Fibonacci"], df["time_seconds"], marker="o", color="purple")
-plt.xlabel("Fibonacci")
-plt.ylabel("Time (seconds)")
-plt.title("Time vs Fibonacci")
-plt.xscale("log")
+    subset = df[df["Category"] == "Fibonacci_Proof"]
+    axs[0, 0].plot(subset["Fibonacci"], subset["Cycles"], marker="o", label="Fibonacci_Proof", linestyle='-', linewidth=1)
+    axs[0, 1].plot(subset["Fibonacci"], subset["Memory Usage (bytes)"], marker="o", label="Fibonacci_Proof")
+    axs[1, 0].plot(subset["Fibonacci"], subset["Proof Size (bytes)"], marker="o", label="Fibonacci_Proof")
+    axs[1, 1].plot(subset["Fibonacci"], subset["Time (seconds)"], marker="o", label="Fibonacci_Proof")
 
-plt.tight_layout()
-plt.show()
+    for ax in axs.flat:
+        ax.legend()
+
+    plt.tight_layout()
+    plt.savefig(save_path, format='png', dpi=300)
+
+
+# Read and parse the JSON data from the file
+df = pd.DataFrame(parse_json_file(file_path))
+
+save_path = "../benchmarks/graphs/miden_fibonacci_prover_metrics.png"
+
+# Generate and save the plots for Fibonacci_Proof data
+plot_all_metrics_in_one(df, save_path)
+

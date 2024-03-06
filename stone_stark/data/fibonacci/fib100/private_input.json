@@ -1,0 +1,7 @@
+{
+    "trace_path": "/root/development/uZumaKi/stone_stark/data/fibonacci/fib100/trace.json",
+    "memory_path": "/root/development/uZumaKi/stone_stark/data/fibonacci/fib100/memory.json",
+    "pedersen": [],
+    "range_check": [],
+    "ecdsa": []
+}
